@@ -8,10 +8,10 @@ const projects = [
   { id: 2, title: 'BLOG PLATFORM', description: 'SEE MORE' , image: 'cover.png'},
   { id: 3, title: 'SAAS SERVICE', description: 'SEE MORE' , image: 'cover.png'},
   { id: 4, title: 'INVEST PLATFORM', description: 'SEE MORE' , image: 'cover.png'},
-  { id: 1, title: 'VIRTUAL CARDS', description: 'SEE MORE.', image: 'cover.png'},
-  { id: 2, title: 'BLOG PLATFORM', description: 'SEE MORE' , image: 'cover.png'},
-  { id: 3, title: 'SAAS SERVICE', description: 'SEE MORE' , image: 'cover.png'},
-  { id: 4, title: 'INVEST PLATFORM', description: 'SEE MORE' , image: 'cover.png'},
+  { id: 5, title: 'VIRTUAL CARDS', description: 'SEE MORE.', image: 'cover.png'},
+  { id: 6, title: 'BLOG PLATFORM', description: 'SEE MORE' , image: 'cover.png'},
+  { id: 7, title: 'SAAS SERVICE', description: 'SEE MORE' , image: 'cover.png'},
+  { id: 8, title: 'INVEST PLATFORM', description: 'SEE MORE' , image: 'cover.png'},
   
   
 ];

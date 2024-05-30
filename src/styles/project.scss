@@ -7,7 +7,7 @@ body {
   
   .projects-container {
     position: relative;
-    height: 400vh; /* to allow scrolling */
+    height: 800vh; /* to allow scrolling */
     overflow-y: none;
   }
   
@@ -120,6 +120,102 @@ body {
       letter-spacing: -.05em;
     }
   }
+
+
+  .project-5 {
+    background-color: #065638;
+    >h2{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+
+    >img{
+       width: 90vw;
+    }
+
+    >p{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+  }
+
+
+  .project-6 {
+    background-color: #e8771a;
+    >h2{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+
+    >img{
+       width: 90vw;
+    }
+
+    >p{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+  }
+
+
+  .project-7 {
+    background-color: #ec28cf;
+    >h2{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+
+    >img{
+       width: 90vw;
+    }
+
+    >p{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+  }
+
+
+  .project-8 {
+    background-color: #e81a24;
+    >h2{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+
+    >img{
+       width: 90vw;
+    }
+
+    >p{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+  }
   
   .project-card:not(:first-child) {
     opacity: 0;
@@ -135,7 +231,7 @@ body {
   @media only screen and (max-width: 600px) {
     .projects-container {
       position: relative;
-      height: 400vh; /* to allow scrolling */
+      height: 800vh; /* to allow scrolling */
       width: 100vw;
     }
     
