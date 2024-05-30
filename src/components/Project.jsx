@@ -1,6 +1,7 @@
 // src/Projects.js
 import React, { useEffect } from 'react';
-import '../styles/project.scss'
+import '../styles/project.scss';
+
 const projects = [
   { id: 1, title: 'Project One', description: 'Description for project one.' },
   { id: 2, title: 'Project Two', description: 'Description for project two.' },
@@ -10,16 +11,32 @@ const projects = [
 
 const Project = () => {
   useEffect(() => {
+    let ticking = false;
+    let scrollY = window.scrollY;
+    const scrollSpeed = 0.6; // Adjust this value to control the scroll speed (lower is slower)
+
     const handleScroll = () => {
-      const projectCards = document.querySelectorAll('.project-card');
-      projectCards.forEach((card, index) => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          card.classList.add('show');
-        } else {
-          card.classList.remove('show');
-        }
-      });
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const newScrollY = window.scrollY;
+          const diff = newScrollY - scrollY;
+          scrollY += diff * scrollSpeed;
+          window.scrollTo(0, scrollY);
+
+          const projectCards = document.querySelectorAll('.project-card');
+          projectCards.forEach((card, index) => {
+            const rect = card.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+              card.classList.add('show');
+            } else {
+              card.classList.remove('show');
+            }
+          });
+
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
