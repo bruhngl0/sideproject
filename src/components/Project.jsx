@@ -20,7 +20,7 @@ const Project = () => {
   useEffect(() => {
     let ticking = false;
     let scrollY = window.scrollY;
-    const scrollSpeed = 0.6; // Adjust this value to control the scroll speed (lower is slower)
+    const scrollSpeed = 1; // Adjust this value to control the scroll speed (lower is slower)
 
     const handleScroll = () => {
       if (!ticking) {
