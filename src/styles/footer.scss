@@ -1,0 +1,31 @@
+footer{
+    background-color: aqua;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+
+  
+    
+}
+
+.footer-one{
+    background-color: red;
+
+    >h1{
+        font-size: 20px;
+    }
+}
+
+.footer-two{
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.footer-two-main{
+
+    >h1{
+        font-size: 20px;
+    }
+}
