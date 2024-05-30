@@ -1,12 +1,13 @@
 // src/Projects.js
 import React, { useEffect } from 'react';
 import '../styles/project.scss';
+import '../../public/cover.png'
 
 const projects = [
-  { id: 1, title: 'Project One', description: 'Description for project one.' },
-  { id: 2, title: 'Project Two', description: 'Description for project two.' },
-  { id: 3, title: 'Project Three', description: 'Description for project three.' },
-  { id: 4, title: 'Project Four', description: 'Description for project four.' },
+  { id: 1, title: 'VIRTUAL CARDS', description: 'SEE MORE.', image: '../../public/cover.png'},
+  { id: 2, title: 'BLOG PLATFORM', description: 'SEE MORE' , image: '../../public/cover.png'},
+  { id: 3, title: 'SAAS SERVICE', description: 'SEE MORE' , image: '../../public/cover.png'},
+  { id: 4, title: 'INVEST PLATFORM', description: 'SEE MORE' , image: '../../public/cover.png'},
 ];
 
 const Project = () => {
@@ -50,6 +51,7 @@ const Project = () => {
       {projects.map((project, index) => (
         <div key={project.id} className={`project-card project-${index + 1}`}>
           <h2>{project.title}</h2>
+          <img src={project.image}/>
           <p>{project.description}</p>
         </div>
       ))}

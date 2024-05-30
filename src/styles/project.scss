@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: self-start;
     transition: transform 0.5s ease, opacity 0.5s ease;
     background-color: white;
     margin: 0;
@@ -30,18 +30,95 @@ body {
   
   .project-1 {
     background-color: #3c1ae8;
+    >h2{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+
+    >img{
+       width: 90vw;
+    }
+
+    >p{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
   }
   
   .project-2 {
     background-color: #30d60f;
+
+    >h2{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+
+    >img{
+       width: 90vw;
+    }
+
+    >p{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
   }
   
   .project-3 {
     background-color: #d0d612;
+    >h2{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+
+    >img{
+       width: 90vw;
+    }
+
+    >p{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
   }
   
   .project-4 {
     background-color: #515151;
+    >h2{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
+
+    >img{
+       width: 90vw;
+    }
+
+    >p{
+      font-size: 60px;
+      font-family:  Helvetica, sans-serif;
+      font-weight: 900;
+      line-height: 4rem;
+      letter-spacing: -.05em;
+    }
   }
   
   .project-card:not(:first-child) {
@@ -59,6 +136,7 @@ body {
     .projects-container {
       position: relative;
       height: 400vh; /* to allow scrolling */
+      width: 100vw;
     }
     
   }
