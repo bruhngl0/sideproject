@@ -4,7 +4,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
+  font-family: 'helvetica';
+  font-weight: 900;
  
 }
 
@@ -17,13 +18,13 @@
     justify-content: center;
     align-items: center;
     padding: 0 auto px;
-    overflow-x: hidden;
+
     background-color: rgb(228, 215, 215);
     color: white;
-    font-family: helvetica;
+  
     width: 100%;
-    overflow-y: hidden;
-    overflow-x: hidden;
+
+  
    position: relative;
 
   
@@ -46,7 +47,7 @@
           color: black;
           text-decoration: none;
           font-size: 35px;
-          font-weight: 900;
+        
           width: 100%;
           text-align: center;
           &:hover {
@@ -61,15 +62,13 @@
           top: 0%;
           right: 0%;
           background-color: rgb(248, 221, 221);
-          overflow-y: hidden;
-          overflow-x: hidden;
+         
           z-index: 6666;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          margin: 0;
-          padding: 0;
+ 
 
 
           button{
@@ -98,7 +97,7 @@
                 color: black;
                 text-decoration: none;
                 font-size: 140px;
-                font-weight:900;
+                
                 line-height: 7.0rem;
              
                 width: 100%;
@@ -132,27 +131,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 auto px;
-  overflow-x: hidden;
+
   background-color: rgb(255, 255, 255);
   color: white;
-  font-family: helvetica;
   width: 100%;
-  overflow-y: hidden;
-  overflow-x: hidden;
- position:relative;
- font-family: 'helvetica';
+  position:relative;
+
   .nav-links {
     list-style: none;
     display: flex;
     gap: 3rem;
-    margin: 0 ;
-    padding: 0;
-    padding-inline-start: 0px;
-  unicode-bidi: isolate;
+   
+   
+   unicode-bidi: isolate;
 
     li {
-      margin: 0;
+     
       position: relative;
 
       a {
@@ -180,10 +174,8 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: 0;
-        padding: 0;
-        font-family: 'helvetica';
-        font-weight: 900;
+       
+     
         button{
           position: fixed;
           top: 6%;
@@ -191,8 +183,8 @@
           background-color: white;
           color: black;
           width: 60px;
-          font-size: larger;
-          font-weight: 900;
+      
+         
         }
        
 
@@ -202,7 +194,7 @@
           flex-direction: column;
           justify-content: center;
           align-items: center ;
-          padding: 0;
+     
           
           margin-bottom: 1rem;
           
@@ -213,7 +205,7 @@
               color: black;
               text-decoration: none;
               font-size: 100px;
-              font-weight: bolder;
+            
               line-height: 4.8rem;
             
             
