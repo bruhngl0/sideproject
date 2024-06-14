@@ -29,7 +29,7 @@ const Header = () => {
                   <li><a href="#option3">TEAM</a></li>
                   <li><a href="#option3">BLOG</a></li>
                   <li><a href="#option3">HELLO</a></li>
-                  <p>25/26 bmt complex, Bangalore 560003</p>
+                 
                 </ul>
                
               </div>
