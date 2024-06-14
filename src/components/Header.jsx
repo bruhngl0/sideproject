@@ -25,7 +25,7 @@ const Header = () => {
                 <button className='cross' onClick={handleMenuClickClose}>X</button>
                 <ul>
                   <li><a href="#option1">ABOUT</a></li>
-                  <li><a href="#option2" style={{color: 'transparent' ,WebkitTextStroke: '2px black' }}>WORK</a></li>
+                  <li><a href="#option2" >WORK</a></li>
                   <li><a href="#option3">TEAM</a></li>
                   <li><a href="#option3">BLOG</a></li>
                   <li><a href="#option3">HELLO</a></li>
