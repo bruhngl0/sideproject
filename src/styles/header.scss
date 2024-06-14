@@ -141,8 +141,7 @@
   overflow-y: hidden;
   overflow-x: hidden;
  position:relative;
-
-
+ font-family: 'helvetica';
   .nav-links {
     list-style: none;
     display: flex;
@@ -183,8 +182,8 @@
         align-items: center;
         margin: 0;
         padding: 0;
-
-
+        font-family: 'helvetica';
+        font-weight: 900;
         button{
           position: fixed;
           top: 6%;
