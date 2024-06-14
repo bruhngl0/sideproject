@@ -8,6 +8,10 @@ const Header = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+
+  const handleMenuClickClose = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
   return (
     <header className="header">
       <nav>
@@ -18,13 +22,16 @@ const Header = () => {
             <a href="#services" onClick={handleMenuClick}>MENU</a>
             {isDropdownOpen && (
               <div className="dropdown-menu">
+                <button className='cross' onClick={handleMenuClickClose}>X</button>
                 <ul>
                   <li><a href="#option1">ABOUT</a></li>
-                  <li><a href="#option2">WORK</a></li>
+                  <li><a href="#option2" style={{color: 'transparent' ,WebkitTextStroke: '2px black' }}>WORK</a></li>
                   <li><a href="#option3">TEAM</a></li>
                   <li><a href="#option3">BLOG</a></li>
                   <li><a href="#option3">HELLO</a></li>
+                  <p>25/26 bmt complex, Bangalore 560003</p>
                 </ul>
+               
               </div>
             )}
           </li>

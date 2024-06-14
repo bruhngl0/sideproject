@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    background-color: rgb(242, 205, 205);
+    background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -29,194 +29,7 @@ body {
     -webkit-overflow-scrolling: touch;
   }
   
-  .project-1 {
-    background-color: #e81a1d;
-    >h2{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-
-    >img{
-       width:300px;
-    }
-
-    >p{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-  }
-  
-  .project-2 {
-    background-color: #30d60f;
-
-    >h2{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-
-    >img{
-       width: 300px;
-    }
-
-    >p{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-  }
-  
-  .project-3 {
-    background-color: #d0d612;
-    >h2{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-
-    >img{
-       width: 300px;
-    }
-
-    >p{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-  }
-  
-  .project-4 {
-    background-color: #1120a9;
-    >h2{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-
-    >img{
-      width: 300px;
-    }
-
-    >p{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-  }
-
-
-  .project-5 {
-    background-color: #065638;
-    >h2{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-
-    >img{
-      width: 300px;
-    }
-
-    >p{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-  }
-
-
-  .project-6 {
-    background-color: #e8771a;
-    >h2{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-
-    >img{
-      width: 300px;
-    }
-
-    >p{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-  }
-
-
-  .project-7 {
-    background-color: #ec28cf;
-    >h2{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-
-    >img{
-      width: 300px;
-    }
-
-    >p{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-  }
-
-
-  .project-8 {
-    background-color: #486ba4;
-    >h2{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-
-    >img{
-      width: 300px;
-    }
-
-    >p{
-      font-size: 60px;
-      font-family:  Helvetica, sans-serif;
-      font-weight: 900;
-      line-height: 3rem;
-      letter-spacing: -.05em;
-    }
-  }
+ 
   
   .project-card:not(:first-child) {
     opacity: 0;
@@ -262,7 +75,7 @@ body {
     justify-content: center;
     font-size: 24px;
     transition: transform 0.5s, opacity 0.5s, z-index 0s 0.5s;
-    opacity: 0;
+    opacity: 0.6;
     transform: translateY(100px);
     background-color: #486ba4;
   }
