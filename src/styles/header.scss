@@ -5,7 +5,7 @@
   src: url('../../public/wtf/M\ Ying\ Hei\ PRC\ W48\ W7.ttf') format('truetype'),
        url('/path/to/fonts/MyCustomFont.woff') format('woff'),
        url('/path/to/fonts/MyCustomFont.ttf') format('truetype');
-  font-weight: 900; /* Can be adjusted as needed */
+  font-weight: 700; /* Can be adjusted as needed */
   font-style: normal; /* Can be set to italic if needed */
 }
 
@@ -195,7 +195,7 @@
           justify-content: center;
           align-items: center ;
           padding: 0;
-       
+          
           margin-bottom: 1rem;
           
 
@@ -204,9 +204,9 @@
             a {
               color: black;
               text-decoration: none;
-              font-size: 100px;
+              font-size: 80px;
               font-weight:900;
-              line-height: 5.5rem;
+              line-height: 4rem;
               letter-spacing: -.05em;
             
            
