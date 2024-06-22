@@ -13,8 +13,9 @@ const Homepage = () => {
     <div>
       <Header />
        <PhotographyPage />
+       <TextReveal />
       <Project />
-      <TextReveal />
+      
     
       
      
