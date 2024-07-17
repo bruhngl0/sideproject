@@ -19,7 +19,7 @@ const Homepage = () => {
        <PhotographyPage />
        <TextReveal />
       <Project />
-      <Parallax />
+     
     
       
      

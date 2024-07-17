@@ -17,7 +17,11 @@ const PhotographyPage = () => {
         <p>Mauris aliquam sagittis mollis. Cras nec eros vel nisl iaculis vulputate. Duis lacinia dictum metus quis iaculis. Integer non imperdiet enim, sit amet sollicitudin augue. Donec viverra tellus at sem mattis tristique. Nullam blandit eu justo quis mollis. Vivamus molestie diam sed turpis ullamcorper maximus. Morbi accumsan risus nibh, vel scelerisque ligula malesuada ut. Donec eu lacus non risus consectetur imperdiet.</p>
         <p>Nam eu lacus quis dolor commodo placerat ut ut arcu. Proin hendrerit efficitur sapien ac tincidunt. Aliquam nec placerat dolor, eu faucibus neque. Aenean egestas pretium felis convallis scelerisque. Nulla ultrices elit vel nisi varius blandit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ac turpis lectus. Nullam non nunc quis nisi cursus sagittis. Proin vestibulum rhoncus euismod. Proin ullamcorper, risus a aliquam sollicitudin, augue nulla lacinia augue, non imperdiet justo libero quis ex. Nunc venenatis nisi quam, eu tristique mi molestie sit amet. Etiam euismod leo nec urna convallis, in hendrerit turpis congue. Morbi fermentum purus nisl, vel iaculis lectus pharetra in. Nulla facilisi. Suspendisse accumsan ante sit amet congue mattis.</p>
         <p>Etiam semper, diam aliquam consequat rhoncus, augue quam semper erat, bibendum euismod urna nisi ac ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt tristique viverra. Mauris venenatis, lorem sit amet vulputate tincidunt, dolor urna varius velit, vel aliquam erat lorem nec mi. Fusce at ornare turpis. Quisque consectetur, velit vel venenatis ultrices, nisl elit porttitor tellus, pharetra finibus eros odio in nisi. Cras tincidunt nulla ac pellentesque finibus. Curabitur interdum urna in tellus dapibus eleifend. In nec pellentesque odio, ut auctor leo. Phasellus vel nisi in nisi egestas mollis. In ornare eleifend pulvinar.</p>
+        <a href="#text-reveal">
+        <img src="arrowdown.png" />
+        </a>     
       </section>
+
     </main>
   );
 };

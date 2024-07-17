@@ -47,7 +47,7 @@ const TextReveal = () => {
   }, []);
 
   return (
-    <div className="text-reveal-container">
+    <div className="text-reveal-container" id="text-reveal">
       {texts.map((text, index) => (
         <p
           key={index}
