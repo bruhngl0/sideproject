@@ -21,13 +21,14 @@
 
   .ex{
     background-color: (245,245,246,255);
-    font-size: 3rem;
+    font-size: 8rem;
+    position: relative;
+   
   }
 
   .ex-one{
     height: 8rem;
-    z-index: -2;
-    position: relative;
+   
     background-color: rgba(245,245,246,255);
   }
 

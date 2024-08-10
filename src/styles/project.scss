@@ -20,7 +20,7 @@
     background-color: rgba(245,245,246,255);
     margin: 0;
     width: 100%;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(222, 216, 216, 0.1);
     z-index: 1;
     overflow-y: none;
     -webkit-overflow-scrolling: touch;
@@ -31,7 +31,7 @@
   
   
   .project-card:not(:first-child) {
-    opacity: 0;
+    opacity:0.5 ;
     transform: translateY(0%);
   }
   

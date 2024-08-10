@@ -1,44 +1,43 @@
-import React, { useState } from 'react';
-import '../styles/header.scss'; // Make sure you have the correct path
+import React, { useState, useEffect } from 'react';
+
 
 const Header = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuClick = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const menuItems = [
+    { name: 'Gallery', link: '/gallery' },
+    { name: 'About', link: '/about' },
+    { name: 'Services', link: '/services' },
+    { name: 'Contact', link: '/contact' },
+    
+  ];
+
+  const handleButtonClick = (event) => {
+    event.stopPropagation();
+    setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const closeMenu = () => setIsMenuOpen(false);
+    if (isMenuOpen) {
+      document.addEventListener('click', closeMenu);
+    }
+    return () => document.removeEventListener('click', closeMenu);
+  }, [isMenuOpen]);
 
-  const handleMenuClickClose = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
   return (
-    <div className="header">
-      <nav>
-        <ul className="nav-links">
-          <li className='nav-links-one'><a href="#home">Hello</a></li>
-         
-          <li className='nav-links-three'>
-            <a href="#services" onClick={handleMenuClick}>Menu</a>
-            {isDropdownOpen && (
-              <div className="dropdown-menu">
-                <button className='cross' onClick={handleMenuClickClose}>X</button>
-                <ul>
-                  <li><a href="#option1">ABOUT</a></li>
-                  <li><a href="#option2" >WORK</a></li>
-                  <li><a href="#option3">TEAM</a></li>
-                  <li><a href="#option3">BLOG</a></li>
-                  <li><a href="#option3">HELLO</a></li>
-                 
-                </ul>
-               
-              </div>
-            )}
-          </li>
-        </ul>
-      </nav>
+    <div className='header'>
+      <h1 className='left-head' onClick={handleButtonClick}>═</h1>
+      <div className={`slide-menu ${isMenuOpen ? 'open' : ''}`}>
+        {menuItems.map((item, index) => (
+          <a key={index} href={item.link}>{item.name}</a>
+        ))}
+      </div>
+      
+      <h1 className='right-head'>Reach</h1>
     </div>
   );
 };
 
-export default Header;
+export default React.memo(Header);
+
