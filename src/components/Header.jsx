@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <h1 className='left-head' onClick={handleButtonClick}>═</h1>
+      <h1 className='left-head' onClick={handleButtonClick}>══</h1>
       <div className={`slide-menu ${isMenuOpen ? 'open' : ''}`}>
         {menuItems.map((item, index) => (
           <a key={index} href={item.link}>{item.name}</a>
