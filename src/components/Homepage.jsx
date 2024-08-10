@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Project from './Project'
 import Parallax from './Parralax'
+import Bruh from './Bruh'
 
 import Footer from './Footer'
 import TextReveal from './TextReveal'
@@ -17,12 +18,13 @@ const Homepage = () => {
     <div>
       <Header />
       <div className='ex-one'>
-      <h1 className='ex'>FULLSTACK DEV</h1>
+      <h1 className='ex'>DEV</h1>
       </div>
        <PhotographyPage />
       
       <Project />
       <TextReveal />
+     
     
       
      
