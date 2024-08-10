@@ -48,7 +48,7 @@ const Project = () => {
   }, []);
 
   return (
-    <div className="projects-container">
+    <div className="projects-container" id="project">
       {projects.map((project, index) => (
         <div
           key={project.id}
