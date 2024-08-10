@@ -20,9 +20,9 @@ const Homepage = () => {
       <h1 className='ex'>FULLSTACK DEV</h1>
       </div>
        <PhotographyPage />
-       <TextReveal />
+      
       <Project />
-     
+      <TextReveal />
     
       
      
