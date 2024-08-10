@@ -34,7 +34,7 @@ const Header = () => {
         ))}
       </div>
       
-      <h1 className='right-head'>Reach</h1>
+      <h1 className='right-head'>Reach Out</h1>
     </div>
   );
 };
