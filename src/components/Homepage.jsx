@@ -18,8 +18,10 @@ const Homepage = () => {
     <div>
       <Header />
       <div className='ex-one'>
-      <h1 className='ex'>DEV</h1>
+      <h1 className='ex'>SDE</h1>
+      <img src= "cyc.png" />
       </div>
+      <p className='sde'>Full-Stack Web App Developer*</p>
        <PhotographyPage />
       
       <Project />

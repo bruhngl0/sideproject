@@ -23,12 +23,26 @@
     background-color: (245,245,246,255);
     font-size: 8rem;
     position: relative;
+    
    
   }
 
   .ex-one{
     height: 8rem;
-   
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(245,245,246,255);
+    padding-left: 10px;
+    letter-spacing: -0.5em;
+
+    >img{
+      height: 100px;
+      padding-top: 20px;
+    }
+  }
+
+  .sde{
+    padding-left: 20px;
     background-color: rgba(245,245,246,255);
   }
 
