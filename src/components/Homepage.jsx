@@ -16,6 +16,9 @@ const Homepage = () => {
   return (
     <div>
       <Header />
+      <div className='ex-one'>
+      <h1 className='ex'>FULLSTACK DEV</h1>
+      </div>
        <PhotographyPage />
        <TextReveal />
       <Project />

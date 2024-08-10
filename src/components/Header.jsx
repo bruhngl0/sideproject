@@ -17,7 +17,7 @@ const Header = () => {
       <nav>
         <ul className="nav-links">
           <li className='nav-links-one'><a href="#home">HELLO</a></li>
-          <li className='nav-links-two'><a href="#about">BRUH.NGL</a></li>
+         
           <li className='nav-links-three'>
             <a href="#services" onClick={handleMenuClick}>MENU</a>
             {isDropdownOpen && (
