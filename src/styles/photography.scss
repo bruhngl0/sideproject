@@ -17,7 +17,7 @@
   
   
   .joker-one {
-    height: 260px;
+    height: 200px;
     width: 100%;
     transform: translateZ(-1px) scale(2.03);
     padding: 1px 0;
@@ -63,6 +63,44 @@
 }
 
 .brain-img{
-  width: 100%;
+  width: 90%;
+  height: 300px;
+ 
+}
 
+.para-po{
+  width: 100%;
+  margin: 0;
+ 
+}
+
+
+.para-po-main{
+  border-top: 1px solid black;
+  padding:20px;
+  margin-top: 20px;
+}
+
+.utils{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.utils-one{
+  display: flex;
+  flex-direction: column;
+  
+  width: 50%;
+
+  padding: 20px;
+}
+
+.utils-two{
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  padding: 20px;
+  padding-left: 8.5rem;
 }
