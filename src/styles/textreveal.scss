@@ -35,10 +35,7 @@
     padding-left: 10px;
     letter-spacing: -0.5em;
 
-    >img{
-      height: 100px;
-      padding-top: 20px;
-    }
+    
   }
 
   .sde{
@@ -52,3 +49,40 @@
     margin-right: 20rem;
     margin-top: 10rem;
   }
+
+
+  .rotating-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* Adjust the height as needed */
+  }
+  
+  .rotating-image {
+    width: 80px; /* Adjust the size as needed */
+    animation: rotateImage 30s linear infinite;
+  }
+  
+  @keyframes rotateImage {
+    0% {
+      transform: rotate(0deg);
+      animation-timing-function: linear;
+    }
+    25% {
+      transform: rotate(90deg);
+      animation-timing-function: linear;
+    }
+    50% {
+      transform: rotate(180deg);
+      animation-timing-function: linear;
+    }
+    75% {
+      transform: rotate(270deg);
+      animation-timing-function: linear;
+    }
+    100% {
+      transform: rotate(360deg);
+      animation-timing-function: linear
+    }
+  }
+  

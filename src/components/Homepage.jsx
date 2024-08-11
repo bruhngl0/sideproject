@@ -19,7 +19,9 @@ const Homepage = () => {
       <Header />
       <div className='ex-one'>
       <h1 className='ex'>SDE</h1>
-      <img src= "cyc.png" />
+      <div className='rotating-container'>
+      <img src= "cyc.png"  className='rotating-image'/>
+      </div>
       </div>
       <p className='sde'>Full-Stack Web App Developer*</p>
        <PhotographyPage />

@@ -25,7 +25,7 @@
  height: 50px;
  background-color: rgba(245,245,246,255);
  z-index: 0;
- font-size: 7px;
+ font-size: 10px;
  font-weight: 100;
 
 
@@ -79,12 +79,7 @@ background-color: #f0f0f0;
 }
 
 @media screen and (max-width: 500px){
-  .header .left-head{
-   margin-left: 20px;
-   justify-content: flex-start;
  
- 
-  }
 
 
   .header .right-head{
@@ -110,6 +105,14 @@ background-color: #f0f0f0;
     
      
   }
+
+  .header .left-head{
+    margin-left: 20px;
+    justify-content: flex-start;
+   color: black;
+   font-size: 20px;
+  
+   }
 }
   
 
