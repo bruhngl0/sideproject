@@ -19,7 +19,8 @@
     transition: transform 0.5s ease, opacity 0.5s ease;
     background-color: rgba(245,245,246,255);
     background-image: url("../../public/new.jpg");
-    background-size: cover;
+    background-position: center;
+    background-size: contain;
     margin: 0;
     width: 100%;
     box-shadow: 0 2px 3px rgba(222, 216, 216, 0.1);
