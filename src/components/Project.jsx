@@ -3,14 +3,14 @@ import '../styles/project.scss';
 import coverImage from '../../public/cover.png'; // Adjust the path based on your setup
 
 const projects = [
-  { id: 1, title: '', description: '', image: '' },
-  { id: 2, title: '', description: '', image: '' },
-  { id: 3, title: '', description: '', image: '' },
-  { id: 4, title: '', description: '', image: '' },
-  { id: 5, title: '', description: '', image: '' },
-  { id: 6, title: '', description: '', image: '' },
-  { id: 7, title: '', description: '', image: '' },
-  { id: 8, title: '', description: '', image: '' },
+  { id: 1, title: '', description: '', image: 'holy.jpg' },
+  { id: 2, title: '', description: '', image: 'unn.jpg' },
+  { id: 3, title: '', description: '', image: 'oran.jpg' },
+  { id: 4, title: '', description: '', image: 'worst1.jpg' },
+  { id: 5, title: '', description: '', image: 'tiles.jpg' },
+  { id: 6, title: '', description: '', image: 'pig.jpg' },
+  { id: 7, title: '', description: '', image: 'hk.jpg' },
+  { id: 8, title: '', description: '', image: 'dia.jpg' },
 ]; 
 
 const Project = () => {
@@ -56,7 +56,7 @@ const Project = () => {
           className="project-card"
         >
           <h2>{project.title}</h2>
-          <img src={project.image} alt={project.title} />
+          <img src={project.image} alt={project.title} className='proj-img'/>
           <p>{project.description}</p>
         </div>
       ))}
