@@ -50,7 +50,7 @@ const Header = () => {
         <span>Instagram</span>
         <span>Twitter</span>
         <span>Github</span>
-        <span>Youtube</span>
+       
         
       </div>
 
