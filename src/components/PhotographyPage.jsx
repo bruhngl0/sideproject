@@ -28,7 +28,7 @@ const PhotographyPage = () => {
         
        
        
-       <p className='para-po-big'> Design Education Series is a new format of an original mini-series on the main principles of design, where we share all insights gained during our experience at Obys Agency.</p>
+       <p className='para-po-big'> Design Education Series is a new format of an original mini-series on the main principles of design, where we share all insights gained during our experience at Obys Agency. Typography Principles, Colors Combinations  </p>
        
        
        <p className='para-po-small' id="para-po"> Over the past 5 years, Obys has released 3 educational projects (websites) that have become quite popular within the design community. These websites have been visited over 1 million times.</p>
