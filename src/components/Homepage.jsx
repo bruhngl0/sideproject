@@ -29,7 +29,7 @@ const Homepage = () => {
        <PhotographyPage />
       
       <Project />
-      <TextReveal />
+      <Footer />
  
      
     
