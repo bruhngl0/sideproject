@@ -25,7 +25,9 @@ const Homepage = () => {
       <img src= "cyc.png"  className='rotating-image'/>
       </div>
       </div>
+      <div className='sde-div'>
       <p className='sde'>Full-Stack Web App Developer*</p>
+      </div>
        <PhotographyPage />
       
       <Project />
