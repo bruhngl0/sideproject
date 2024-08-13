@@ -4,13 +4,11 @@ import coverImage from '../../public/cover.png'; // Adjust the path based on you
 
 const projects = [
   { id: 1, title: '', description: '', image: 'holy.jpg' },
-  { id: 2, title: '', description: '', image: 'unn.jpg' },
-  { id: 3, title: '', description: '', image: 'oran.jpg' },
-  { id: 4, title: '', description: '', image: 'worst1.jpg' },
-  { id: 5, title: '', description: '', image: 'tiles.jpg' },
-  { id: 6, title: '', description: '', image: 'pig.jpg' },
-  { id: 7, title: '', description: '', image: 'hk.jpg' },
-  { id: 8, title: '', description: '', image: '' },
+  { id: 2, title: '', description: '', image: 'unn.jpg' },,
+  { id: 3, title: '', description: '', image: 'tiles.jpg' },
+  { id: 4, title: '', description: '', image: 'pig.jpg' },
+  { id: 5, title: '', description: '', image: 'hk.jpg' },
+ ,
 ]; 
 
 const Project = () => {
