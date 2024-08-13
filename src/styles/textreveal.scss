@@ -64,19 +64,7 @@
   .rotating-image {
     width: 75px; /* Adjust the size as needed */
     padding-bottom: 12px;
-    
   }
   
-  img {
-    transform: rotate(0deg);
-    animation: rotate 1s infinite;
-  }
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+ 
   
