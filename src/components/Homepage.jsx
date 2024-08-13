@@ -22,7 +22,7 @@ const Homepage = () => {
       <div className='ex-one'>
       <h1 className='ex'>SDE</h1>
       <div className='rotating-container'>
-      <img src= "cyc.png"  className='rotating-image'/>
+      <img src= "eyepatch.png"  className='rotating-image'/>
       </div>
       </div>
       <div className='sde-div'>
