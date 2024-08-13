@@ -27,13 +27,20 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <h1 className='left-head' onClick={handleButtonClick}>■■■</h1>
+      {<h1 className='left-head' onClick={handleButtonClick}>❒❒❒</h1>}
+      <img src = "" className='iris'/>
       <div className={`slide-menu ${isMenuOpen ? 'open' : ''}`}>
       <div className='footer-top'>
-      <div className='small-group-menu-top'>Menu:</div>
+        <div className='cross-menu'>
+          <span style={{fontSize: "20px",}}>❒❒❒</span>
+        </div>
+      
       <div className='large-group-top'>
-        <span>Home</span>
-        <span>Seasons</span>
+        <span style={{color: "black"}}>Home</span>
+        <span style={{color: "black"}}>Seasons</span>
+        <span style= {{fontSize: "20px" , color: "black", fontWeight: "200", paddingTop:"3px", paddingBottom: "3px"}}>Social Media: (Coming Soon)</span>
+        <span style= {{fontSize: "20px", color: "black", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}>Instagram (bruh.ngl)</span>
+        <span style= {{fontSize: "20px", color: "black", fontWeight: "200",  paddingTop:"3px", paddingBottom: "3px"}}>Twitter</span>
         <span>About</span>
         
       </div>
@@ -48,8 +55,8 @@ const Header = () => {
       </div>
 
       <div className='policy-top'>Privacy Policy and legal terms</div>
-      <div className='des-1-top'>designed by bruh</div>
-      <div className='des-2-top'>coded by bruh</div>
+      <div className='des-1-top'>designed by bruh.ngl</div>
+      <div className='des-2-top'>coded by bruh.ngl</div>
       </div>
       </div>
       
