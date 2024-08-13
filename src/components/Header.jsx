@@ -31,8 +31,8 @@ const Header = () => {
       <img src = "" className='iris'/>
       <div className={`slide-menu ${isMenuOpen ? 'open' : ''}`}>
       <div className='footer-top'>
-        <div className='cross-menu'>
-          <span style={{fontSize: "20px",}}>❒❒❒</span>
+        <div style={{}}>
+          <span style={{fontSize: "20px", marginBottom: "1px solid black"}}>❒❒❒</span>
         </div>
       
       <div className='large-group-top'>
@@ -55,8 +55,8 @@ const Header = () => {
       </div>
 
       <div className='policy-top'>Privacy Policy and legal terms</div>
-      <div className='des-1-top'>designed by bruh.ngl</div>
-      <div className='des-2-top'>coded by bruh.ngl</div>
+      
+      
       </div>
       </div>
       
