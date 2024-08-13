@@ -18,10 +18,8 @@ const PhotographyPage = () => {
              <span>Resume</span>
           </div>
         </div>
-         <div className="image-container-main">
-         <img className='brain-img' src="arr.jpg" alt="Brain" />
-         <img className='eyepatch' src="eyepatch.png" alt="Eyepatch" />
-        </div>
+        <img className='brain-img'  src="arr.jpg"/>
+
         <div className='para-po-main'>      
         <p className='para-po'>(About Series)</p>
         
