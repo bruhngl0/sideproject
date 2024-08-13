@@ -79,9 +79,24 @@
 }
 
 .para-po{
+  font-size: 12px;
+}
+
+.para-po-small{
   width: 100%;
   margin: 0;
- 
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+
+.para-po-big{
+  width: 100%;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-top: 1rem;
+  letter-spacing: -.02em;
+  line-height: 1;
 }
 
 
@@ -114,4 +129,22 @@
   padding: 20px;
   padding-left: 8.5rem;
   width: 30%;
+}
+
+
+.list{
+  display: flex;
+  flex-direction: column;
+ 
+  justify-content: center;
+  padding-bottom: 10rem;
+  
+ width: 90%;
+  >span{
+    padding: 5px;
+    border-bottom: 1px solid black ;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+  }
 }
