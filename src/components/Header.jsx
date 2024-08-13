@@ -29,9 +29,28 @@ const Header = () => {
     <div className='header'>
       <h1 className='left-head' onClick={handleButtonClick}>■■■</h1>
       <div className={`slide-menu ${isMenuOpen ? 'open' : ''}`}>
-        {menuItems.map((item, index) => (
-          <a key={index} href={item.link}>{item.name}</a>
-        ))}
+      <div className='footer-top'>
+      <div className='small-group-menu-top'>Menu:</div>
+      <div className='large-group-top'>
+        <span>Home</span>
+        <span>Seasons</span>
+        <span>About</span>
+        
+      </div>
+
+      <div className='small-group-top'>
+        <span>Social Media:</span>
+        <span>Instagram</span>
+        <span>Twitter</span>
+        <span>Github</span>
+        <span>Youtube</span>
+        
+      </div>
+
+      <div className='policy-top'>Privacy Policy and legal terms</div>
+      <div className='des-1-top'>designed by bruh</div>
+      <div className='des-2-top'>coded by bruh</div>
+      </div>
       </div>
       
       <h1 className='right-head'>Reach Out</h1>
