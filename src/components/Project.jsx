@@ -3,11 +3,11 @@ import '../styles/project.scss';
 import coverImage from '../../public/cover.png'; // Adjust the path based on your setup
 
 const projects = [
-  { id: 1, title: '', description: '', image: 'holy.jpg' },
-  { id: 2, title: '', description: '', image: 'unn.jpg' },,
-  { id: 3, title: '', description: '', image: 'tiles.jpg' },
-  { id: 4, title: '', description: '', image: 'pig.jpg' },
-  { id: 5, title: '', description: '', image: 'hk.jpg' },
+  { id: 1, title: '', description: '', image: '' },
+  { id: 2, title: '', description: '', image: '' },,
+  { id: 3, title: '', description: '', image: '' },
+  { id: 4, title: '', description: '', image: '' },
+  { id: 5, title: '', description: '', image: '' },
  ,
 ]; 
 
