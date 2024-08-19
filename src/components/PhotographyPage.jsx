@@ -18,7 +18,7 @@ const PhotographyPage = () => {
              <span>Resume</span>
           </div>
         </div>
-       
+        <img className='brain-img'  src="watch.jpg"/>
 
         <div className='para-po-main'>      
         <p className='para-po'>(About Series)</p>
