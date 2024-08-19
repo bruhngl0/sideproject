@@ -31,7 +31,7 @@ const Homepage = () => {
        <PhotographyPage />
       
       <Project />
-      <Footer />
+      
  
      
     
