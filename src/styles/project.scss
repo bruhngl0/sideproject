@@ -1,33 +1,7 @@
 /* src/Projects.css */
 
   
-  .projects-container {
-    position: relative;
-    height: 600vh; /* to allow scrolling */
-    width: 100%;
-    overflow-y: none;
-  }
-  
-  .project-card {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    background-color: rgba(245,245,246,255);
-    padding: 20px ;
-    background-position: center;
-    background-size: contain;
-    margin: 0;
-    width: 100%;
-    box-shadow: 0 2px 3px rgba(222, 216, 216, 0.1);
-    z-index: 1;
-    overflow-y: none;
-    -webkit-overflow-scrolling: touch;
-  }
+
   
   .title{
     padding-top: 3rem;
@@ -50,10 +24,32 @@
   
   }
   
+
+
+
+
+  .projects-container {
+    position: relative;
+    height: 600vh; /* to allow scrolling */
+    width: 100%;
+    overflow-y: none;
+  }
   
-  .project-card:not(:first-child) {
-    opacity:0.5 ;
-    transform: translateY(0%);
+  .project-card {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    background-color: rgba(245, 245, 246, 1);
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    box-shadow: 0 2px 3px rgba(222, 216, 216, 0.1);
+    z-index: 1;
   }
   
   .project-card.show {
@@ -61,23 +57,32 @@
     transform: translateY(0%);
   }
   
-
+  .project-card.fade-out {
+    opacity: 0.3;
+  }
+  
+  .project-card.fade-out-one {
+    opacity: 0;
+  }
+  
   .project-card img {
-    width: 100%;
-    height: auto;
+    width: 25%;
+    height: 50%;
     margin-top: 1rem;
     display: flex;
     align-self: center;
     background-color: #486ba4;
   }
-
+  
   @media only screen and (max-width: 600px) {
     .projects-container {
-      position: relative;
-      height: 600vh; /* to allow scrolling */
-      width: 100%;
+      height: 600vh;
     }
-    
+  
+    .project-card img {
+      width: 100%;
+      height: auto;
+    }
   }
 
 

@@ -1,15 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../styles/project.scss';
-import coverImage from '../../public/cover.png'; // Adjust the path based on your setup
 
 const projects = [
-  { id: 1, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to Here is the new, light, and entertaining format of the ', name: 'e-comm', image: 'ripley.jpg', description1:'we live lit', description2: 'test description two', util1: '', util2: ''},
-  { id: 2, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley2.jpg', description1:'we live lit', description2: 'test description two', util1: '', util2: ''},
-  { id: 3, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley3.jpg', description1:'we live lit', description2: 'test description two', util1: '', util2: ''},
-  { id: 4, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley4.jpg', description1:'we live lit', description2: 'test description two', util1: '', util2: ''},
-  { id: 5, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley5.jpg', description1:'we live lit', description2: 'test description two', util1: '', util2: ''},
- ,
-]; 
+  { id: 1, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley.jpg', description1:'we live lit', description2: 'test description two' },
+  { id: 2, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley2.jpg', description1:'we live lit', description2: 'test description two' },
+  { id: 3, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley3.jpg', description1:'we live lit', description2: 'test description two' },
+  { id: 4, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley4.jpg', description1:'we live lit', description2: 'test description two' },
+  { id: 5, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley5.jpg', description1:'we live lit', description2: 'test description two' },
+];
 
 const Project = () => {
   const projectRefs = useRef([]);
@@ -18,14 +16,26 @@ const Project = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.1,
+      threshold: 0.2,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        const index = projectRefs.current.indexOf(entry.target);
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
-          observer.unobserve(entry.target);
+          if (index > 0 ) {
+            projectRefs.current[index - 1].classList.add('fade-out'); 
+            projectRefs.current[index-2].classList.add('fade-out-one')
+          }
+
+
+        } else {
+          entry.target.classList.remove('show');
+          if (index > 0) {
+            projectRefs.current[index - 1].classList.remove('fade-out');
+            projectRefs.current[index - 2].classList.remove('fade-out-one')
+          }
         }
       });
     }, options);
@@ -66,6 +76,7 @@ const Project = () => {
 };
 
 export default Project;
+
 
 
 
