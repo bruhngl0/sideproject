@@ -58,12 +58,11 @@
   }
   
   .project-card.fade-out {
-    opacity: 0.3;
+    opacity: 1;
+    filter: brightness(0.5);
   }
   
-  .project-card.fade-out-one {
-    opacity: 0;
-  }
+
   
   .project-card img {
     width: 25%;

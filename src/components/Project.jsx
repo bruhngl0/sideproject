@@ -26,7 +26,7 @@ const Project = () => {
           entry.target.classList.add('show');
           if (index > 0 ) {
             projectRefs.current[index - 1].classList.add('fade-out'); 
-            projectRefs.current[index-2].classList.add('fade-out-one')
+          
           }
 
 
@@ -34,7 +34,7 @@ const Project = () => {
           entry.target.classList.remove('show');
           if (index > 0) {
             projectRefs.current[index - 1].classList.remove('fade-out');
-            projectRefs.current[index - 2].classList.remove('fade-out-one')
+            
           }
         }
       });
