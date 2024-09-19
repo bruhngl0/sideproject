@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'schabo';
+    src: url('/font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    font-family: 'schabo';
+  }
+  
+  .scrollable-images, .fixed-content {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'schabo';
+  }
+  
+  .scrollable-images {
+    position: relative;
+  }
+  
+  .image-stack {
+    display: flex;
+    flex-direction: column;
+    height: 200%;
+    width: 100%;
+  }
+  
+  .image-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .love {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background for better readability */
+    color: white; /* Text color */
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: schabo;
+
+    >p{
+       
+    }
+    
+  }
+  

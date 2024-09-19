@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import InternalHoly from './InternalHoly';
 import '../styles/project.scss';
 
 const projects = [
@@ -66,7 +67,9 @@ const Project = () => {
           <h2 className='title'>{project.title}</h2>
           <p className='des'>{project.description}</p>
           <span className='name'>{project.name}</span>
-          <img src={project.image} alt={project.title} className='proj-img'/>
+          <div className='int'>
+           <InternalHoly />
+           </div>
           <p className='desc-1'>{project.description1}</p>
           <p className='desc-2'>{project.description2}</p>
         </div>
