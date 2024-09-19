@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import InternalHoly from './InternalHoly';
 import '../styles/project.scss';
-import Layout from './Layout';
 
 const projects = [
   { id: 1, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley.jpg', description1:'we live lit', description2: 'test description two' },
@@ -68,9 +66,7 @@ const Project = () => {
           <h2 className='title'>{project.title}</h2>
           <p className='des'>{project.description}</p>
           <span className='name'>{project.name}</span>
-          <div className='int'>
-           <Layout />
-           </div>
+          <img src={project.image} alt={project.title} className='proj-img'/>
           <p className='desc-1'>{project.description1}</p>
           <p className='desc-2'>{project.description2}</p>
         </div>
