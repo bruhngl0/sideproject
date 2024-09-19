@@ -59,9 +59,24 @@
   
   .project-card.fade-out {
     opacity: 1;
-    filter: brightness(0.5);
+    animation: fadeOut 2s ease-in-out forwards; 
+  
   }
   
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      filter: brightness(1);
+     
+      scale: (1);
+    }
+    100% {
+      opacity: 1;
+      filter: brightness(0.5); /* Adjust this to the level you want */
+      
+      scale: .96;
+    }
+  }
 
   
   .project-card img {
