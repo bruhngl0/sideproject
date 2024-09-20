@@ -18,7 +18,18 @@ const PhotographyPage = () => {
              <span>Resume</span>
           </div>
         </div>
-        <img className='brain-img'  src="watch.jpg"/>
+        <video 
+            className='brain-video' 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            preload="auto" 
+            title="Photography Series" // Video title
+          >
+          <source src="watch.mp4" type="video/mp4" className='brain-img'/>
+            Your browser does not support the video tag.
+          </video>
 
         <div className='para-po-main'>      
         <p className='para-po'>(About Series)</p>
