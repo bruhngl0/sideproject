@@ -1,13 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react';
 import '../styles/project.scss';
-import vid from "../../public/min.mp4"
 
 const projects = [
-  { id: 1, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley.jpg', description1:'we live lit', description2: 'test description two', content: vid },
-  { id: 2, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley2.jpg', description1:'we live lit', description2: 'test description two',content: vid },
-  { id: 3, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley3.jpg', description1:'we live lit', description2: 'test description two', content: vid  },
-  { id: 4, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley4.jpg', description1:'we live lit', description2: 'test description two', content: vid },
-  { id: 5, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley5.jpg', description1:'we live lit', description2: 'test description two', content: vid },
+  { id: 1, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley.jpg', description1:'we live lit', description2: 'test description two' },
+  { id: 2, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley2.jpg', description1:'we live lit', description2: 'test description two' },
+  { id: 3, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley3.jpg', description1:'we live lit', description2: 'test description two' },
+  { id: 4, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley4.jpg', description1:'we live lit', description2: 'test description two' },
+  { id: 5, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: 'ripley5.jpg', description1:'we live lit', description2: 'test description two' },
 ];
 
 const Project = () => {
@@ -67,18 +66,7 @@ const Project = () => {
           <h2 className='title'>{project.title}</h2>
           <p className='des'>{project.description}</p>
           <span className='name'>{project.name}</span>
-          <video 
-            className='brain-video' 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            preload="auto" 
-            title="Photography Series" // Video title
-          >
-          <source src= {project.content} type="video/mp4" className='proj-img'/>
-            Your browser does not support the video tag.
-          </video>
+          <img src={project.image} alt={project.title} className='proj-img'/>
           <p className='desc-1'>{project.description1}</p>
           <p className='desc-2'>{project.description2}</p>
         </div>
