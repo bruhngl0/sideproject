@@ -27,7 +27,7 @@ const PhotographyPage = () => {
             preload="auto" 
             title="Photography Series" // Video title
           >
-          <source src="watch.mp4" type="video/mp4" className='brain-img'/>
+          <source src="studio.mp4" type="video/mp4" className='brain-img'/>
             Your browser does not support the video tag.
           </video>
 
