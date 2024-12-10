@@ -6,22 +6,31 @@
   .title{
     padding-top: 3rem;
     font-size: 2rem;
+    color: black;
+    background-color: transparent;
   }
 
   .des{
     padding-top: 2rem;
     font-size: 0.8rem;
+    background-color: transparent;
   }
  
   .name{
     padding-top: 1rem ;
     font-size: 2rem;
+    background-color: transparent;
   }
 
   .desc-1{
   margin-top: 2rem;
   font-size: 0.8rem;
+  background-color: transparent;
   
+  }
+
+  .desc-2{
+    background-color: transparent;
   }
   
 
@@ -44,7 +53,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    background-color: rgba(245, 245, 246, 1);
+    background-color: transparent;
     padding: 20px;
     margin: 0;
     width: 100%;
@@ -85,7 +94,7 @@
     margin-top: 1rem;
     display: flex;
     align-self: center;
-    background-color: #486ba4;
+    background-color: transparent;
   }
   
   @media only screen and (max-width: 600px) {
@@ -93,15 +102,48 @@
       height: 600vh;
     }
   
-    .project-card img {
+    .project-card video {
       width: 100%;
       height: auto;
+      margin-top: 0;
     }
   }
 
+  .proj-img{
+    
+  }
 
 
   /* src/Projects.css */
 
   
   
+
+
+
+
+  /* Define dynamic background colors for each project card */
+.bg-1 {
+  background-color: pink  /* Light Pink */
+}
+
+.bg-2 {
+  background-color: rgb(155, 36, 36);  /* Light Blue */
+}
+
+.bg-3 {
+  background-color: #d590e1;  /* Light Green */
+}
+
+.bg-4 {
+  background-color: #FFEB3B;  /* Yellow */
+}
+
+.bg-5 {
+  background-color: #FF7043;  /* Light Red */
+}
+
+
+
+
+

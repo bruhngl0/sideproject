@@ -3,7 +3,7 @@ import '../styles/project.scss';
 import video1 from "../../public/studio.mp4"
 
 const projects = [
-  { id: 1, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: video1, description1:'we live lit', description2: 'test description two' },
+  { id: 1, title: 'STUDIO MASON', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: video1, description1:'we live lit', description2: 'test description two' },
   { id: 2, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: video1, description1:'we live lit', description2: 'test description two' },
   { id: 3, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: video1, description1:'we live lit', description2: 'test description two' },
   { id: 4, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: video1, description1:'we live lit', description2: 'test description two' },
@@ -62,13 +62,9 @@ const Project = () => {
         <div
           key={project.id}
           ref={(el) => (projectRefs.current[index] = el)}
-          className="project-card"
+          className={`project-card bg-${project.id}`} 
         >
-          <h2 className='title'>{project.title}</h2>
-          <p className='des'>{project.description}</p>
-          <span className='name'>{project.name}</span>
-
-          <video 
+           <video 
             className='proj-img' 
             autoPlay 
             loop 
@@ -80,6 +76,11 @@ const Project = () => {
           <source src= {project.image} type="video/mp4" className='proj-img'/>
             Your browser does not support the video tag.
           </video>
+          <h2 className='title'>{project.title}</h2>
+          <p className='des'>{project.description}</p>
+          <span className='name'>{project.name}</span>
+
+         
           <p className='desc-1'>{project.description1}</p>
           <p className='desc-2'>{project.description2}</p>
         </div>
