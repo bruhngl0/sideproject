@@ -1,91 +1,143 @@
-import React, { useEffect, useState, useRef } from 'react';
-import '../styles/project.scss';
-import video1 from "../../public/studio.mp4"
+import React, { useEffect, useRef } from "react";
+import "../styles/project.scss";
 
-const projects = [
-  { id: 1, title: 'STUDIO MASON', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: video1, description1:'we live lit', description2: 'test description two' },
-  { id: 2, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: video1, description1:'we live lit', description2: 'test description two' },
-  { id: 3, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: video1, description1:'we live lit', description2: 'test description two' },
-  { id: 4, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: video1, description1:'we live lit', description2: 'test description two' },
-  { id: 5, title: 'UNNECESSARY', description: 'Here is the new, light, and entertaining format of the series that we are excited to present to you format of the series that we are excited to', name: 'e-comm', image: video1, description1:'we live lit', description2: 'test description two' },
+const serviceStacks = [
+  {
+    id: "01",
+    title: "AI Agents & Smart Automation",
+    intro:
+      "Agents that run around the clock for calling, scheduling, and execution without manual intervention.",
+    services: [
+      "AI Voice Agents for support, lead qualification, and reminders",
+      "AI Video Agents for sales, onboarding, and training",
+      "Task Scheduler Agents for multi-step autonomous workflows",
+      "Email & Calendar automation for drafting and scheduling",
+      "AI Receptionist and booking bots across industries",
+      "Multi-agent pipelines for complex business operations",
+    ],
+  },
+  {
+    id: "02",
+    title: "Chatbots & Conversational AI",
+    intro:
+      "Context-aware assistants for customers and teams that understand business knowledge, not just prompts.",
+    services: [
+      "Website and WhatsApp chatbots for support and lead generation",
+      "Internal knowledge-base bots using docs, SOPs, and wikis",
+      "E-commerce assistants for recommendations and order tracking",
+      "HR and onboarding bots for policy and FAQ automation",
+      "Multilingual chatbot flows for global user support",
+      "Voice-enabled chat interfaces for natural interactions",
+    ],
+  },
+  {
+    id: "03",
+    title: "Mobile Apps, Web Apps & Websites",
+    intro:
+      "Fast, conversion-focused products with clean UX and AI features built directly into the experience.",
+    services: [
+      "iOS and Android apps built with React Native or Flutter",
+      "Progressive Web Apps from a single codebase",
+      "SaaS platforms with payments and subscription architecture",
+      "E-commerce stores with AI recommendation experiences",
+      "Landing pages and marketing sites designed to convert",
+      "Admin dashboards and internal operations tools",
+    ],
+  },
+  {
+    id: "04",
+    title: "AI / ML Engineering & Infrastructure",
+    intro:
+      "Production AI systems with reliable deployment, monitoring, scaling, and deep integration into existing products.",
+    services: [
+      "Custom model fine-tuning on your data and domain",
+      "RAG architecture connected to business documents",
+      "MLOps pipelines for deployment and observability",
+      "LLM integration into current product and process flows",
+      "Agent frameworks for planning and task execution",
+      "Scalable AI infrastructure design for long-term growth",
+    ],
+  },
+  {
+    id: "05",
+    title: "Business Automation at Scale",
+    intro:
+      "Automation systems that connect your tools and remove repetitive work across the entire business stack.",
+    services: [
+      "End-to-end workflows across CRM, ERP, billing, and approvals",
+      "Data scraping, processing, and enrichment pipelines",
+      "Automated reporting with AI-generated operational insights",
+      "Document processing for invoices, contracts, and forms",
+      "Custom API integrations across your internal tools",
+      "AI-powered social media and marketing automation",
+    ],
+  },
 ];
 
 const Project = () => {
-  const projectRefs = useRef([]);
+  const cardRefs = useRef([]);
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const index = projectRefs.current.indexOf(entry.target);
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          if (index > 0 ) {
-            projectRefs.current[index - 1].classList.add('fade-out'); 
-          
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = cardRefs.current.indexOf(entry.target);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            if (index > 0 && cardRefs.current[index - 1]) {
+              cardRefs.current[index - 1].classList.add("fade-out");
+            }
+          } else {
+            entry.target.classList.remove("show");
+            if (index > 0 && cardRefs.current[index - 1]) {
+              cardRefs.current[index - 1].classList.remove("fade-out");
+            }
           }
+        });
+      },
+      { threshold: 0.25 }
+    );
 
-
-        } else {
-          entry.target.classList.remove('show');
-          if (index > 0) {
-            projectRefs.current[index - 1].classList.remove('fade-out');
-            
-          }
-        }
-      });
-    }, options);
-
-    if (projectRefs.current) {
-      projectRefs.current.forEach((ref) => {
-        if (ref) observer.observe(ref);
-      });
-    }
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
 
     return () => {
-      if (projectRefs.current) {
-        projectRefs.current.forEach((ref) => {
-          if (ref) observer.unobserve(ref);
-        });
-      }
+      cardRefs.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
     };
   }, []);
 
   return (
-    <div className="projects-container" id="project">
-      {projects.map((project, index) => (
-        <div
-          key={project.id}
-          ref={(el) => (projectRefs.current[index] = el)}
-          className={`project-card bg-${project.id}`} 
+    <section className="projects-container" id="project">
+      {serviceStacks.map((stack, index) => (
+        <article
+          key={stack.id}
+          ref={(el) => (cardRefs.current[index] = el)}
+          className={`project-card ${index === 0 ? "show" : ""}`}
         >
-           <video 
-            className='proj-img' 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            preload="auto" 
-            title="Photography Series" // Video title
-          >
-          <source src= {project.image} type="video/mp4" className='proj-img'/>
-            Your browser does not support the video tag.
-          </video>
-          <h2 className='title'>{project.title}</h2>
-          <p className='des'>{project.description}</p>
-          <span className='name'>{project.name}</span>
+          <div className="service-card">
+            <div className="service-card__top">
+              <p className="service-card__index">Service {stack.id}</p>
+              <div className="service-card__swatch" aria-hidden="true" />
+            </div>
 
-         
-          <p className='desc-1'>{project.description1}</p>
-          <p className='desc-2'>{project.description2}</p>
-        </div>
+            <p className="service-card__title">{stack.title}</p>
+            <div className="service-card__media" aria-hidden="true" />
+            <p className="service-card__intro">{stack.intro}</p>
+
+            <ul className="service-card__list">
+              {stack.services.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <p className="service-card__brand">Nerd Labs Services</p>
+          </div>
+        </article>
       ))}
-    </div>
+    </section>
   );
 };
 

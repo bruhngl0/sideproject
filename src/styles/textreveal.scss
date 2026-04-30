@@ -20,8 +20,9 @@
   
 
   .ex{
-    background-color: (245,245,246,255);
-    font-size: 8rem;
+    
+    background-color: rgba(245,245,246,255);
+    font-size: 3rem;
     position: relative;
     
    
@@ -33,14 +34,18 @@
     flex-direction: row;
     background-color: rgba(245,245,246,255);
     padding-left: 10px;
-    letter-spacing: -0.5em;
+    letter-spacing: -0.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
 
     
   }
 
   .sde{
-    padding-left: 20px;
-    background-color: rgba(245,245,246,255);
+    padding-right: 50px;
+    background-color: green;
   
   }
   
@@ -49,7 +54,7 @@
  
   .touch-img{
     width: 40px;
-    margin-right: 20rem;
+    margin-right: 10rem;
     margin-top: 10rem;
   }
 
@@ -58,12 +63,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 10px;
      /* Adjust the height as needed */
   }
   
   .rotating-image {
-    width: 75px; /* Adjust the size as needed */
-    padding-bottom: 12px;
+    width: 55px; /* Adjust the size as needed */
+
+
   }
   
  

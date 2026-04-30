@@ -1,63 +1,167 @@
-.footer{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 20px;
-    background-color: rgba(245,245,246,255);
+.des-footer {
+  width: 100%;
+  height: 100vh;
+  background: #f2f2f2;
+  color: #17191a;
+  font-family: "Space Grotesk", sans-serif;
+  padding: 110px 28px 52px;
 }
 
-.large-group{
-    
-    padding: 2px;
-    display: flex;
-    flex-direction: column;
-
-    >span{
-        font-size: 2.4rem;
-        color: gray;
-        font-weight: 600;
-        border-bottom: 1px solid rgb(5, 5, 5);
-
-    }
+.des-wrapper--dark .des-footer {
+  background: #111214;
+  color: #ececef;
 }
 
-.small-group{
-    margin-top: 2rem;
-    color: black;
-    padding: 2px;
-    display: flex;
-    flex-direction: column;
-
-    >span{
-        font-size: 12px;
-        padding-top:4px ;
-        padding-bottom:4px; 
-        color: rgb(0, 0, 0);
-        border-bottom: 1px solid rgb(0, 0, 0);
-    }
+.des-footer__inner {
+  width: 100%;
 }
 
-.small-group-menu{
-    margin-top: 9rem;
-    font-size: 12px;
-    padding-top:4px ;
-    padding-bottom:4px; 
-    color: rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(0, 0, 0);
+.des-footer__label {
+  font-size: 24px;
+  line-height: 1.1;
+  margin-bottom: 20px;
 }
 
-
-
-.policy{
-    margin-top: 2rem;
+.des-footer__menu {
+  border-top: 2px solid rgba(23, 25, 26, 0.55);
 }
 
-.des-1{
-    margin-top: 1rem;
-    font-size: 12px;
+.des-footer__menu-item {
+  display: block;
+  text-decoration: none;
+  color: #17191a;
+  font-size: clamp(24px, 6vw, 32px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  padding: 7px 0 10px;
+  border-bottom: 2px solid rgba(23, 25, 26, 0.55);
+
+  sup {
+    font-size: 0.36em;
+    vertical-align: super;
+    margin-left: 2px;
+  }
 }
 
-.des-2{
-font-size: 12px;
+.des-wrapper--dark .des-footer__menu,
+.des-wrapper--dark .des-footer__social-list,
+.des-wrapper--dark .des-footer__menu-item,
+.des-wrapper--dark .des-footer__social-item {
+  border-color: rgba(236, 236, 239, 0.55);
+}
+
+.des-wrapper--dark .des-footer__menu-item,
+.des-wrapper--dark .des-footer__social-item,
+.des-wrapper--dark .des-footer__policy,
+.des-wrapper--dark .des-footer__copyright,
+.des-wrapper--dark .des-footer__credit {
+  color: #ececef;
+}
+
+.des-wrapper--dark .des-footer__menu-item--muted {
+  color: rgba(236, 236, 239, 0.45);
+}
+
+.des-footer__menu-item--muted {
+  color: rgba(23, 25, 26, 0.45);
+}
+
+.des-footer__inner--social {
+  margin-top: 108px;
+}
+
+.des-footer__social-list {
+  border-top: 2px solid rgba(23, 25, 26, 0.55);
+}
+
+.des-footer__social-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #17191a;
+  font-size: 45px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  padding: 11px 0 12px;
+  border-bottom: 2px solid rgba(23, 25, 26, 0.55);
+}
+
+.des-footer__arrow {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.des-footer__inner--meta {
+  margin-top: 74px;
+}
+
+.des-footer__policy,
+.des-footer__copyright,
+.des-footer__credit {
+  font-size: 44px;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.des-footer__policy a,
+.des-footer__credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.des-footer__copyright {
+  margin-top: 68px;
+}
+
+.des-footer__credit {
+  margin-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .des-footer {
+    padding: 64px 20px 36px;
+  }
+
+  .des-footer__label {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .des-footer__menu-item {
+    font-size: clamp(48px, 12.8vw, 72px);
+    padding: 5px 0 7px;
+  }
+
+  .des-footer__inner--social {
+    margin-top: 64px;
+  }
+
+  .des-footer__social-item {
+    font-size: clamp(14px, 3.4vw, 24px);
+    padding: 8px 0;
+  }
+
+  .des-footer__arrow {
+    font-size: 16px;
+  }
+
+  .des-footer__inner--meta {
+    margin-top: 48px;
+  }
+
+  .des-footer__policy,
+  .des-footer__copyright,
+  .des-footer__credit {
+    font-size: clamp(14px, 1.5vw, 16px);
+  }
+
+  .des-footer__copyright {
+    margin-top: 48px;
+  }
+
+  .des-footer__credit {
+    margin-top: 8px;
+  }
 }
