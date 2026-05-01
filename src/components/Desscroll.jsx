@@ -95,7 +95,8 @@ export default function DESScroll() {
           pin: headerRef.current,
           pinSpacing: false,
           // transform-based pin avoids the fixed-position repaint flicker
-          pinType: "transform",
+          pinType: "fixed",
+          pinReparent: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
         });

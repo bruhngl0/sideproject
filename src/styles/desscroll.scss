@@ -126,7 +126,8 @@ html, body, #root {
   align-items: center;   // vertically centre icon with text cap-height
   gap: 8px;
   padding: 0 20px;
-  line-height: 1;        // collapse any extra line-height gaps
+  line-height: 1;    
+  margin-top: 2rem;// collapse any extra line-height gaps
 }
 
 .des-header__wordmark {
