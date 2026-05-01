@@ -8,12 +8,11 @@ const serviceStacks = [
     intro:
       "Agents that run around the clock for calling, scheduling, and execution without manual intervention.",
     services: [
-      "AI Voice Agents for support, lead qualification, and reminders",
-      "AI Video Agents for sales, onboarding, and training",
-      "Task Scheduler Agents for multi-step autonomous workflows",
-      "Email & Calendar automation for drafting and scheduling",
-      "AI Receptionist and booking bots across industries",
-      "Multi-agent pipelines for complex business operations",
+      "AI Voice Agents for support & lead qualification.",
+      "AI Video Agents for sales, onboarding, and training.",
+      "Task Scheduler Agents for autonomous workflows.",
+      "Automation for drafting and scheduling.",
+      "Multi-agent pipelines for complex business operations.",
     ],
   },
   {
@@ -22,12 +21,12 @@ const serviceStacks = [
     intro:
       "Context-aware assistants for customers and teams that understand business knowledge, not just prompts.",
     services: [
-      "Website and WhatsApp chatbots for support and lead generation",
-      "Internal knowledge-base bots using docs, SOPs, and wikis",
-      "E-commerce assistants for recommendations and order tracking",
-      "HR and onboarding bots for policy and FAQ automation",
-      "Multilingual chatbot flows for global user support",
-      "Voice-enabled chat interfaces for natural interactions",
+      "Website and WhatsApp chatbots.",
+      "Internal knowledge-base bots using docs/SOPs/wikis.",
+      "E-commerce assistants for order tracking.",
+
+      "Multilingual chatbot flows for global user support.",
+      "Voice-enabled chat interfaces for natural interactions.",
     ],
   },
   {
@@ -36,12 +35,11 @@ const serviceStacks = [
     intro:
       "Fast, conversion-focused products with clean UX and AI features built directly into the experience.",
     services: [
-      "iOS and Android apps built with React Native or Flutter",
-      "Progressive Web Apps from a single codebase",
-      "SaaS platforms with payments and subscription architecture",
-      "E-commerce stores with AI recommendation experiences",
-      "Landing pages and marketing sites designed to convert",
-      "Admin dashboards and internal operations tools",
+      "iOS & Android apps built with React Native/Flutter.",
+      "Progressive Web Apps from a single codebase.",
+      "SaaS platforms with payments and subscription.",
+      "E-commerce stores with AI recommendations.",
+      "Admin dashboards and internal operations tools.",
     ],
   },
   {
@@ -50,12 +48,11 @@ const serviceStacks = [
     intro:
       "Production AI systems with reliable deployment, monitoring, scaling, and deep integration into existing products.",
     services: [
-      "Custom model fine-tuning on your data and domain",
-      "RAG architecture connected to business documents",
-      "MLOps pipelines for deployment and observability",
-      "LLM integration into current product and process flows",
-      "Agent frameworks for planning and task execution",
-      "Scalable AI infrastructure design for long-term growth",
+      "Custom model fine-tuning on your data and domain.",
+      "RAG architecture connected to business documents.",
+      "MLOps pipelines for deployment and observability.",
+      "LLM integration into current product & process flows.",
+      "Agent frameworks for planning and task execution.",
     ],
   },
   {
@@ -64,12 +61,11 @@ const serviceStacks = [
     intro:
       "Automation systems that connect your tools and remove repetitive work across the entire business stack.",
     services: [
-      "End-to-end workflows across CRM, ERP, billing, and approvals",
-      "Data scraping, processing, and enrichment pipelines",
-      "Automated reporting with AI-generated operational insights",
-      "Document processing for invoices, contracts, and forms",
-      "Custom API integrations across your internal tools",
-      "AI-powered social media and marketing automation",
+      "End-to-end workflows across CRM/ERP/billing.",
+      "Data scraping, processing, and enrichment pipelines.",
+      "Automated reporting with AI-generated insights.",
+      "Document processing for invoices/contracts/forms.",
+      "AI-powered social media and marketing automation.",
     ],
   },
 ];
@@ -95,7 +91,7 @@ const Project = () => {
           }
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0.25 },
     );
 
     cardRefs.current.forEach((card) => {
@@ -142,9 +138,3 @@ const Project = () => {
 };
 
 export default Project;
-
-
-
-
-
-
