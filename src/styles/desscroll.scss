@@ -50,8 +50,8 @@ html, body, #root {
   z-index: 120;
   background: var(--theme-bg);
   padding-bottom: 12px;
-  backface-visibility: hidden;
-  transform: translateZ(0);
+  // Fix glitch: use will-change instead of backface-visibility hack
+  will-change: transform;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -120,11 +120,13 @@ html, body, #root {
   }
 }
 
+// ── Logo row: wordmark + icon side by side, baseline-aligned ──
 .des-header__logo-row {
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  align-items: center;   // vertically centre icon with text cap-height
+  gap: 8px;
   padding: 0 20px;
+  line-height: 1;        // collapse any extra line-height gaps
 }
 
 .des-header__wordmark {
@@ -136,15 +138,29 @@ html, body, #root {
   user-select: none;
 }
 
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+// Icon sized to match the cap-height of the wordmark
 .des-header__icon {
-  margin-top: 6px;
-  width: clamp(60px, 16vw, 90px);
-  height: auto;
+  // clamp so it scales with the wordmark font-size
+  width: clamp(44px, 8.5vw, 82px);
+  height: clamp(44px, 8.5vw, 82px);
   flex-shrink: 0;
+  display: block;
+  // colour inherits from --theme-fg via currentColor
+  color: var(--theme-fg);
+  // nudge down very slightly so optical centre aligns with text
+  margin-top: 2px;
+  // slow continuous rotation
+  animation: spin-slow 10s linear infinite;
+  transform-origin: center center;
 }
 
 .des-header__tagline {
-  padding: 10px 20px 0;
+  padding: 8px 20px 0;
   font-size: 13px;
   font-weight: 400;
   color: var(--theme-fg);
@@ -155,7 +171,6 @@ html, body, #root {
 .des-spacer {
   width: 100%;
   flex-shrink: 0;
-  // no background — just empty space showing the bg
 }
 
 // ── Panel ─────────────────────────────────────────────────────
@@ -222,7 +237,7 @@ html, body, #root {
     height: 10px;
     background: rgba(255,255,255,0.55);
     border-radius: 2px;
-    font-size: 0; // visually a white pill, matching reference
+    font-size: 0;
   }
 
   // ── About ──
@@ -316,9 +331,8 @@ html, body, #root {
     font-size: 16px;
     line-height: 0.9;
     letter-spacing: -0.015em;
-   padding: 8px 0 8px;
+    padding: 8px 0 8px;
     border-top: 1px solid var(--theme-border);
-    
 
     &:last-child {
       border-bottom: 1px solid var(--theme-border);
@@ -329,5 +343,9 @@ html, body, #root {
     font-size: 16px;
     line-height: 1;
     margin-left: 16px;
+    // Force text rendering — prevents iOS from showing emoji variant
+    font-family: $font;
+    font-variant-emoji: text;
+    -webkit-font-smoothing: antialiased;
   }
 }
