@@ -150,7 +150,7 @@ export default function DESScroll() {
         </header>
 
         {/* This spacer creates the 'gap' for the fixed header to be seen */}
-        <div className="des-spacer" style={{ height: "33vh" }} />
+        <div className="des-spacer" style={{ height: "30vh" }} />
 
         <section ref={panelRef} className="des-panel">
           <div className="des-panel__intro-row">
