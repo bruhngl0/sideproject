@@ -50,6 +50,7 @@ html, body, #root {
   z-index: 120;
   background: var(--theme-bg);
   padding-bottom: 12px;
+  
   // Fix glitch: use will-change instead of backface-visibility hack
   will-change: transform;
   -webkit-font-smoothing: antialiased;
