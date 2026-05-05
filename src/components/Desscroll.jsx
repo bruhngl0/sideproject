@@ -137,7 +137,7 @@ export default function DESScroll() {
           </p>
         </header>
 
-        <div className="des-spacer" style={{ height: "30vh" }} />
+        <div className="des-spacer" style={{ height: "34vh" }} />
 
         <section ref={panelRef} className="des-panel">
           <div className="des-panel__intro-row">
@@ -154,18 +154,26 @@ export default function DESScroll() {
           </div>
 
           <div className="des-panel__stripes">
-            {STRIPE_HEIGHTS.map((h, i) => (
-              <div
-                key={i}
-                className="des-panel__stripe"
-                style={{ height: `${h}px` }}
-              />
-            ))}
+            {STRIPE_HEIGHTS.map((h, i) => {
+              // Calculate a factor from 0 (first) to 1 (last)
+              const factor = i / (STRIPE_HEIGHTS.length - 1);
+
+              return (
+                <div
+                  key={i}
+                  className="des-panel__stripe"
+                  style={{
+                    height: `${h}px`,
+                    // This creates a custom property we can use in SCSS
+                    "--darken-factor": factor,
+                  }}
+                />
+              );
+            })}
             <div className="des-panel__stripe-cta">
-              Building what the future runs on
+              BUILDING WHAT THE FUCTURE RUNS ON
             </div>
           </div>
-
           <div className="des-card">
             <div className="des-card__video-wrap">
               <div className="des-card__video-placeholder">
