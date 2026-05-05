@@ -55,26 +55,7 @@ function NerdLabsIcon({ className }) {
   );
 }
 
-const GRID_COLOURS = [
-  "--teal",
-  "--rust",
-  "--coral",
-  "--sand",
-  "--slate",
-  "--olive",
-  "--amber",
-  "--muted",
-];
-const GRID_LABELS = [
-  "Ep. 01",
-  "Ep. 02",
-  "Ep. 03",
-  "Ep. 04",
-  "Ep. 05",
-  "Ep. 06",
-  "Ep. 07",
-  "Ep. 08",
-];
+const STRIPE_HEIGHTS = [2, 4, 6, 9, 13, 18, 24, 32];
 
 export default function DESScroll() {
   const outerRef = useRef(null);
@@ -83,7 +64,6 @@ export default function DESScroll() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Delay so GSAP measures DOM after first paint — eliminates jump/glitch
     const id = setTimeout(() => {
       const ctx = gsap.context(() => {
         ScrollTrigger.create({
@@ -94,23 +74,36 @@ export default function DESScroll() {
           end: () => `top top+=${headerRef.current?.offsetHeight ?? 0}`,
           pin: headerRef.current,
           pinSpacing: false,
-          // transform-based pin avoids the fixed-position repaint flicker
           pinType: "fixed",
           pinReparent: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
         });
 
-        gsap.from(".des-panel__grid-item", {
+        gsap.from(".des-panel__stripe", {
           scrollTrigger: {
-            trigger: ".des-panel__grid",
+            trigger: ".des-panel__stripes",
             scroller: outerRef.current,
             start: "top 90%",
           },
-          y: 50,
+          scaleX: 0,
+          transformOrigin: "left center",
           opacity: 0,
-          duration: 0.8,
-          stagger: 0.05,
+          duration: 0.6,
+          stagger: 0.06,
+          ease: "power2.out",
+        });
+
+        gsap.from(".des-panel__stripe-cta", {
+          scrollTrigger: {
+            trigger: ".des-panel__stripes",
+            scroller: outerRef.current,
+            start: "top 85%",
+          },
+          y: 20,
+          opacity: 0,
+          duration: 0.7,
+          delay: 0.5,
           ease: "power2.out",
         });
       }, outerRef);
@@ -131,27 +124,7 @@ export default function DESScroll() {
       <div className="des-outer" ref={outerRef}>
         <header ref={headerRef} className="des-header">
           <nav className="des-nav">
-            <div className="des-nav__hamburger">
-              <span />
-              <span />
-            </div>
-            <div className="des-nav__actions">
-              <a className="des-nav__login" href="#login">
-                Log In
-              </a>
-              <button
-                type="button"
-                className="des-nav__theme-toggle"
-                aria-label="Toggle dark mode"
-                aria-pressed={isDarkMode}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setIsDarkMode((prev) => !prev);
-                }}
-              >
-                <span className="des-nav__theme-toggle-dot" />
-              </button>
-            </div>
+            <div className="des-nav__actions"></div>
           </nav>
 
           <div className="des-header__logo-row">
@@ -180,17 +153,48 @@ export default function DESScroll() {
             </a>
           </div>
 
-          <div className="des-panel__grid">
-            {GRID_COLOURS.map((mod, i) => (
+          <div className="des-panel__stripes">
+            {STRIPE_HEIGHTS.map((h, i) => (
               <div
                 key={i}
-                className={`des-panel__grid-item des-panel__grid-item${mod}`}
-              >
-                <span className="des-panel__grid-label">{GRID_LABELS[i]}</span>
-              </div>
+                className="des-panel__stripe"
+                style={{ height: `${h}px` }}
+              />
             ))}
+            <div className="des-panel__stripe-cta">
+              Building what the future runs on
+            </div>
           </div>
 
+          <div className="des-card">
+            <div className="des-card__video-wrap">
+              <div className="des-card__video-placeholder">
+                <video
+                  className="des-card__video"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  src="luck.mp4"
+                />
+              </div>
+            </div>
+
+            <p className="des-card__headline">
+              We build AI systems
+              <br />
+              that scale with
+              <br />
+              exceptional teams
+              <br />
+              &amp; founders
+            </p>
+
+            <footer className="des-card__footer">
+              <span>NerdLabs</span>
+              <span>INTRO</span>
+            </footer>
+          </div>
           <p className="des-panel__about-label">(About Series)</p>
 
           <section className="des-story">

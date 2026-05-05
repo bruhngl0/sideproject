@@ -1,229 +1,71 @@
-import React, { useState } from "react";
-import { FaSquareInstagram } from "react-icons/fa6";
-import { IoMailSharp } from "react-icons/io5";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { IoIosArrowDown } from "react-icons/io";
+import React from "react";
 import "../styles/footer.scss";
 
 const Footer = () => {
-  const [expandedSection, setExpandedSection] = useState(null);
-
-  const toggleSection = (sectionId) => {
-    setExpandedSection(expandedSection === sectionId ? null : sectionId);
-  };
-
-  const navLinks = [
-    { label: "Nerd Labs", href: "/" },
-    { label: "Contact", href: "/enquiry" },
-    { label: "Bulk Orders", href: "/bulkOrders" },
-    { label: "Buy Guide", href: "/buyGuide" },
-  ];
-
-  const serviceLinks = [
-    { label: "Bespoke", href: "/bespokeint" },
-    { label: "Shipping Policy", href: "/shipping-policy" },
-    { label: "Return & Exchange", href: "/return-policy" },
-    { label: "Terms of Trade", href: "/return-policy" },
-    { label: "Privacy Policy", href: "/return-policy" },
-    { label: "Care Instructions", href: "/care-instructions" },
-  ];
-
-  const popularLinks = [
-    { label: "Planters", href: "/test-comp" },
-    { label: "Desk Planters", href: "/test-comp2" },
-    { label: "Breeze Blocks", href: "/breezeBlocks" },
-    { label: "Tables", href: "/test-comp4" },
-  ];
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="footer-main">
-      {/* Scrolling band */}
-      <div className="footer-band">
-        <span className="footer-band-text">
-          HANDCRAFTED · BANGALORE · NERD LABS · CONCRETE & CRAFT · HANDCRAFTED ·
-          BANGALORE · NERD LABS · CONCRETE & CRAFT · HANDCRAFTED · BANGALORE ·
-          NERD LABS · CONCRETE & CRAFT ·
-        </span>
-      </div>
+    <div className="footer-container">
+      <section className="contact-card">
+        <div className="header-label">
+          {/* Using a simple SVG for the chat icon */}
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          <span>Get in touch</span>
+        </div>
 
-      {/* Main grid */}
-      <div className="footer-grid">
-        {/* Col 1 — Brand */}
-        <div className="footer-col footer-brand footer-section">
-          <div
-            className="section-header"
-            onClick={() => toggleSection("brand")}
-          >
-            <div className="brand-wordmark">Nerd Labs</div>
-            <IoIosArrowDown
-              className={`arrow-icon ${expandedSection === "brand" ? "expanded" : ""}`}
-            />
-          </div>
-          <div
-            className={`section-content ${expandedSection === "brand" ? "expanded" : ""}`}
-          >
-            <address className="footer-address">
-              KSSIDC Industrial Estate, 74
-              <br />
-              Bommasandra
-              <br />
-              Bangalore, India
-            </address>
-            <div className="footer-social">
-              <span className="social-label">Follow</span>
-              <div className="social-icons">
-                <a
-                  href="mailto:info@studiomason.in"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Email"
-                  className="social-link"
-                >
-                  <IoMailSharp size={20} />
-                </a>
-                <a
-                  href="https://www.instagram.com/studiomason_blr?igsh=b3Z3eWo3NGo5YWt4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="social-link"
-                >
-                  <FaSquareInstagram size={20} />
-                </a>
-              </div>
+        <h1 className="main-heading">
+          If you’re not sure whether your company is a fit for us,
+          <a href="#send" className="underlined">
+            {" "}
+            send it our way.
+          </a>
+          <br />
+          We'll get back to you
+          <a href="#time" className="underlined">
+            {" "}
+            within 24 hours
+          </a>
+        </h1>
+
+        <div className="cta-buttons">
+          <a href="mailto:hello@odinscrow.com" className="cta-link">
+            <div className="left-content">
+              <span className="icon">✉</span>
+              <span>Email us</span>
             </div>
-          </div>
-        </div>
+            <span className="arrow">→</span>
+          </a>
 
-        {/* Col 2 — Mason */}
-        <div className="footer-col footer-section">
-          <div
-            className="section-header"
-            onClick={() => toggleSection("mason")}
-          >
-            <p className="col-label">
-              <em>01</em> Mason
-            </p>
-            <IoIosArrowDown
-              className={`arrow-icon ${expandedSection === "mason" ? "expanded" : ""}`}
-            />
-          </div>
-          <div
-            className={`section-content ${expandedSection === "mason" ? "expanded" : ""}`}
-          >
-            <nav className="footer-nav">
-              {navLinks.map((l) => (
-                <a key={l.label} href={l.href} className="footer-link">
-                  <span className="link-arrow">→</span>
-                  {l.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </div>
-
-        {/* Col 3 — Customer Service */}
-        <div className="footer-col footer-section">
-          <div
-            className="section-header"
-            onClick={() => toggleSection("service")}
-          >
-            <p className="col-label">
-              <em>02</em> Service
-            </p>
-            <IoIosArrowDown
-              className={`arrow-icon ${expandedSection === "service" ? "expanded" : ""}`}
-            />
-          </div>
-          <div
-            className={`section-content ${expandedSection === "service" ? "expanded" : ""}`}
-          >
-            <nav className="footer-nav">
-              {serviceLinks.map((l) => (
-                <a key={l.label} href={l.href} className="footer-link">
-                  <span className="link-arrow">→</span>
-                  {l.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </div>
-
-        {/* Col 4 — Popular */}
-        <div className="footer-col footer-section">
-          <div
-            className="section-header"
-            onClick={() => toggleSection("popular")}
-          >
-            <p className="col-label">
-              <em>03</em> Popular
-            </p>
-            <IoIosArrowDown
-              className={`arrow-icon ${expandedSection === "popular" ? "expanded" : ""}`}
-            />
-          </div>
-          <div
-            className={`section-content ${expandedSection === "popular" ? "expanded" : ""}`}
-          >
-            <nav className="footer-nav">
-              {popularLinks.map((l) => (
-                <a key={l.label} href={l.href} className="footer-link">
-                  <span className="link-arrow">→</span>
-                  {l.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </div>
-
-        {/* Col 5 — CTA */}
-        <div className="footer-col footer-cta footer-section">
-          <div className="section-header" onClick={() => toggleSection("cta")}>
-            <p className="cta-headline">
-              Reach out.
-              <br />
-              Save 10% on everything new.
-            </p>
-            <IoIosArrowDown
-              className={`arrow-icon ${expandedSection === "cta" ? "expanded" : ""}`}
-            />
-          </div>
-          <div
-            className={`section-content ${expandedSection === "cta" ? "expanded" : ""}`}
-          >
-            <p className="cta-sub">
-              Connect with us directly — we'd love to hear from you.
-            </p>
-            <div className="cta-actions">
-              <a
-                href="mailto:info@studiomason.in"
-                className="cta-btn"
-                aria-label="Email us"
-              >
-                <IoMailSharp size={18} />
-                <span>Email</span>
-              </a>
-              <a
-                href="https://wa.me/+919980547044"
-                className="cta-btn cta-btn--whatsapp"
-                aria-label="WhatsApp"
-              >
-                <IoLogoWhatsapp size={18} />
-                <span>WhatsApp</span>
-              </a>
+          <a href="tel:+123456789" className="cta-link">
+            <div className="left-content">
+              <span className="icon">📞</span>
+              <span>Call us</span>
             </div>
-          </div>
+            <span className="arrow">→</span>
+          </a>
         </div>
+      </section>
+
+      <div className="decorative-lines">
+        {[...Array(5)].map((_, i) => (
+          <div key={i} className="line" />
+        ))}
       </div>
 
-      {/* Bottom bar */}
-      <div className="footer-bottom">
-        <span className="footer-copy">
-          © {new Date().getFullYear()} Nerd Labs. All rights reserved.
-        </span>
-        <span className="footer-tagline">Made with concrete & care.</span>
-      </div>
-    </footer>
+      <footer className="footer-bottom">
+        <span className="brand">NERD LABS</span>
+        <span className="copyright">© {currentYear}</span>
+      </footer>
+    </div>
   );
 };
 

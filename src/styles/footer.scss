@@ -1,411 +1,135 @@
-// ─── Design Tokens ──────────────────────────────────────────────
-$bg:           #f2f2f2;
-$black:        #000000;
-$mid-gray:     #888888;
-$light-border: rgba(0, 0, 0, 0.12);
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-$font-display: 'Playfair Display', Georgia, serif;
-$font-body:    'Jost', 'Helvetica Neue', sans-serif;
+// Your Updated Variables
+$bg:   #f2f2f2;
+$fg:   #2b2b2b;
+$font: 'Space Grotesk', sans-serif;
 
-$border:   0.5px solid $light-border;
-$col-pad:  2.5rem;
-
-// ─── Google Fonts import ─────────────────────────────────────────
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
-
-// ─── Footer shell ────────────────────────────────────────────────
-.footer-main {
-  width: 100%;
+.footer-container {
   background-color: $bg;
-  font-family: $font-body;
-  color: $black;
-  overflow: hidden;
-}
+  padding: 1rem;
+  max-width: 100vw; 
+  margin: 0 auto;
+  font-family: $font;
 
-// ─── Scrolling band ──────────────────────────────────────────────
-.footer-band {
-  width: 100%;
-  overflow: hidden;
-  padding: 0.55rem 0;
-  white-space: nowrap;
-}
+  .contact-card {
+    background-color: $fg; // Using your #17191a
+    color: $bg;            // Using your #f2f2f2 for text contrast
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
 
-.footer-band-text {
-  display: inline-block;
-  color: black;
-  font-family: $font-body;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  animation: marquee 28s linear infinite;
-}
+    .header-label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 4rem;
+      text-transform: lowercase; // Space Grotesk looks great in lowercase
+      color: white;
+      background-color: $fg;
 
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
+      >svg{
+        background-color: $fg;
+      }
 
-// ─── Main grid ───────────────────────────────────────────────────
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1.1fr 1fr 1.4fr;
-  border-bottom: $border;
-}
+      >span{
+        background-color: $fg;
+      }
+    }
 
-// ─── Shared column ───────────────────────────────────────────────
-.footer-col {
-  display: flex;
-  flex-direction: column;
-  padding: $col-pad;
-  border-right: $border;
-
-  &:last-child {
-    border-right: none;
-  }
-}
-
-// ─── Section header ──────────────────────────────────────────────
-.section-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 1.75rem;
-
-  .arrow-icon {
-    display: none;
-    font-size: 18px;
-    flex-shrink: 0;
-    margin-top: 2px;
-    transition: transform 0.3s ease;
-    color: $black;
-
-    &.expanded {
-      transform: rotate(180deg);
+    .main-heading {
+      font-size: 1.2rem;
+      font-weight: 700; // Utilizing the 700 weight of Space Grotesk
+      line-height: 0.9;
+      margin-bottom: 4rem;
+      letter-spacing: -0.001em;
+      background-color: $fg;
+      
+      .underlined {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 1px;
+        transition: opacity 0.2s ease;
+        background-color: $fg;
+        
+        &:hover {
+          opacity: 0.7;
+        }
+      }
     }
   }
 }
 
-// ─── Brand column ────────────────────────────────────────────────
-.footer-brand .section-header {
-  align-items: flex-end;
-}
-
-.brand-wordmark {
-  font-family: $font-display;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  color: $black;
-}
-
-.footer-address {
-  font-style: normal;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  line-height: 1.9;
-  color: $mid-gray;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-.footer-social {
+.cta-buttons {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
-}
+  gap: 1rem;
+  background-color: $fg;
 
-.social-label {
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: $mid-gray;
-}
+  .cta-link {
+    background-color: $bg;
+    color: $fg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
 
-.social-icons {
-  display: flex;
-  gap: 0.75rem;
-}
+    &:hover {
+      background-color: darken($bg, 3%);
+    }
 
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: 1px solid rgba($black, 0.25);
-  border-radius: 50%;
-  color: $black;
-  text-decoration: none;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    .left-content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      
+      .icon {
+        font-size: 1.2rem;
+      }
+    }
 
-  &:hover {
-    background-color: $black;
-    border-color: $black;
-    color: $bg;
-  }
-}
-
-// ─── Column label ────────────────────────────────────────────────
-.col-label {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: $black;
-  margin: 0;
-
-  em {
-    font-style: italic;
-    font-family: $font-display;
-    font-size: 13px;
-    font-weight: 400;
-    margin-right: 0.4rem;
-    color: $mid-gray;
-  }
-}
-
-// ─── Nav links ───────────────────────────────────────────────────
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.footer-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 11.5px;
-  font-weight: 500;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: $mid-gray;
-  text-decoration: none;
-  transition: color 0.2s ease;
-
-  .link-arrow {
-    font-size: 11px;
-    opacity: 0;
-    transform: translateX(-4px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    color: $black;
-  }
-
-  &:hover {
-    color: $black;
-
-    .link-arrow {
-      opacity: 1;
-      transform: translateX(0);
+    .arrow {
+      font-size: 1.4rem;
     }
   }
 }
 
-// ─── CTA column ──────────────────────────────────────────────────
-.footer-cta {
-  background-color: $bg;
-}
-
-.cta-headline {
-  font-family: $font-display;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.3;
-  color: $black;
-  margin: 0;
-}
-
-.cta-sub {
-  font-size: 11.5px;
-  color: $mid-gray;
-  line-height: 1.7;
-  margin-bottom: 1.75rem;
-  letter-spacing: 0.03em;
-}
-
-.cta-actions {
+.decorative-lines {
+  margin: 1.5rem 0 0.5rem 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-}
+  gap: 4px; // Tighter gap for the tapering effect
 
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.65rem 1.2rem;
-  border: 1px solid rgba($black, 0.3);
-  border-radius: 40px;
-  font-family: $font-body;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: $black;
-  text-decoration: none;
-  background-color: transparent;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-  width: fit-content;
-
-  &:hover {
-    background-color: $black;
-    border-color: $black;
-    color: $bg;
-  }
-
-  &--whatsapp:hover {
-    background-color: #25d366;
-    border-color: #25d366;
-    color: white;
+  .line {
+    background-color: $fg;
+    width: 100%;
+    
+    // Loop through 5 lines to decrease height
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        // Line 1: 10px, Line 2: 8px, Line 3: 6px...
+        height: #{12 - ($i * 2)}px; 
+        
+        // Optional: reduce opacity slightly for a "fade" effect
+        opacity: #{1.1 - ($i * 0.15)};
+      }
+    }
   }
 }
 
-// ─── Bottom bar ──────────────────────────────────────────────────
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1.1rem $col-pad;
-  background-color: $bg;
-  border-top: $border;
-}
-
-.footer-copy,
-.footer-tagline {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  border-top: 1.5px solid $fg;
+  padding-top: 0.6rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: $mid-gray;
-}
-
-.footer-tagline {
-  font-family: $font-display;
-  font-style: italic;
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  text-transform: none;
-  color: rgba($black, 0.35);
-}
-
-// ─── Responsive: medium ──────────────────────────────────────────
-@media screen and (max-width: 1100px) {
-  .footer-grid {
-    grid-template-columns: 1.2fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-  }
-
-  .footer-cta {
-    grid-column: 1 / -1;
-    border-right: none;
-    border-top: $border;
-    border-left: none;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 3rem;
-  }
-
-  .footer-cta .section-header {
-    flex: 1;
-    margin-bottom: 0;
-  }
-
-  .footer-cta .section-content {
-    flex: 1;
-    max-height: none;
-    opacity: 1;
-    padding: 0;
-    overflow: visible;
-  }
-}
-
-
-// ─── Responsive: mobile ──────────────────────────────────────────
-@media screen and (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-col {
-    padding: 0;
-    border-right: none;
-    border-bottom: $border;
-
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-
-  .section-header {
-    padding: 1.1rem 1.5rem;
-    margin-bottom: 0;
-    cursor: pointer;
-
-    // reset cta-headline margin so it doesn't bleed
-    .cta-headline {
-      font-size: 16px;
-      margin: 0;
-    }
-
-    .arrow-icon {
-      display: block;
-      flex-shrink: 0;
-      margin-left: 1rem;
-    }
-  }
-
-  // All section-content collapsed by default on mobile
-  .section-content {
-    max-height: 0 !important;
-    overflow: hidden !important;
-    opacity: 0 !important;
-    transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
-    padding: 0 1.5rem !important;
-
-    &.expanded {
-      max-height: 600px !important;
-      opacity: 1 !important;
-      padding: 0 1.5rem 1.5rem !important;
-    }
-  }
-
-  .footer-cta {
-    flex-direction: column;
-    gap: 0;
-    border-top: none;
-    border-left: none;
-
-    // reset the 1100px overrides inside mobile
-    .section-header {
-      flex: unset;
-      width: 100%;
-    }
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 0.4rem;
-    text-align: center;
-    padding: 1.2rem 1.5rem;
-  }
-
-  .brand-wordmark {
-    font-size: 26px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .footer-band-text {
-    font-size: 9px;
-    letter-spacing: 0.12em;
-  }
-
-  .cta-actions {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
 }
