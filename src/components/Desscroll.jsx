@@ -124,7 +124,7 @@ export default function DESScroll() {
       <div className="des-outer" ref={outerRef}>
         <header ref={headerRef} className="des-header">
           <nav className="des-nav">
-            <div className="des-nav__actions"></div>
+            <div className="des-nav__actions"> </div>
           </nav>
 
           <div className="des-header__logo-row">
@@ -137,7 +137,7 @@ export default function DESScroll() {
           </p>
         </header>
 
-        <div className="des-spacer" style={{ height: "34vh" }} />
+        <div className="des-spacer" style={{ height: "35vh" }} />
 
         <section ref={panelRef} className="des-panel">
           <div className="des-panel__intro-row">
@@ -171,7 +171,7 @@ export default function DESScroll() {
               );
             })}
             <div className="des-panel__stripe-cta">
-              BUILDING WHAT THE FUCTURE RUNS ON
+              BUILDING WHAT THE FUTURE RUNS ON
             </div>
           </div>
           <div className="des-card">

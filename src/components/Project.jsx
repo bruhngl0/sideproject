@@ -5,6 +5,7 @@ const serviceStacks = [
   {
     id: "01",
     title: "AI Agents & Smart Automation",
+    image: "01.png",
     intro:
       "Agents that run around the clock for calling, scheduling, and execution without manual intervention.",
     services: [
@@ -18,6 +19,7 @@ const serviceStacks = [
   {
     id: "02",
     title: "Chatbots & Conversational AI",
+    image: "02.png",
     intro:
       "Context-aware assistants for customers and teams that understand business knowledge, not just prompts.",
     services: [
@@ -32,6 +34,7 @@ const serviceStacks = [
   {
     id: "03",
     title: "Mobile Apps, Web Apps & Websites",
+    image: "03.png",
     intro:
       "Fast, conversion-focused products with clean UX and AI features built directly into the experience.",
     services: [
@@ -45,6 +48,7 @@ const serviceStacks = [
   {
     id: "04",
     title: "AI / ML Engineering & Infrastructure",
+    image: "04.png",
     intro:
       "Production AI systems with reliable deployment, monitoring, scaling, and deep integration into existing products.",
     services: [
@@ -58,6 +62,7 @@ const serviceStacks = [
   {
     id: "05",
     title: "Business Automation at Scale",
+    image: "05.png",
     intro:
       "Automation systems that connect your tools and remove repetitive work across the entire business stack.",
     services: [
@@ -118,17 +123,16 @@ const Project = () => {
               <p className="service-card__index">Service {stack.id}</p>
               <div className="service-card__swatch" aria-hidden="true" />
             </div>
-
             <p className="service-card__title">{stack.title}</p>
-            <div className="service-card__media" aria-hidden="true" />
+            <div className="service-card__media">
+              <img src={stack.image} alt={stack.title} />
+            </div>{" "}
             <p className="service-card__intro">{stack.intro}</p>
-
             <ul className="service-card__list">
               {stack.services.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-
             <p className="service-card__brand">Nerd Labs Services</p>
           </div>
         </article>
