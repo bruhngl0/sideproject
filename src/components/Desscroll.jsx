@@ -133,7 +133,7 @@ export default function DESScroll() {
           </div>
 
           <p className="des-header__tagline">
-            Design Education Series® by Obys®
+            AI Powered Digital Products and Solutions.
           </p>
         </header>
 
@@ -142,14 +142,19 @@ export default function DESScroll() {
         <section ref={panelRef} className="des-panel">
           <div className="des-panel__intro-row">
             <p className="des-panel__intro-text">
-              Original Series by
+              Where IT teams
               <br />
-              Obys® about the main
+              bring Secure AI
               <br />
-              design principles
+              to Work.
             </p>
-            <a className="des-panel__trailer-link" href="#trailer">
-              Watch Trailer
+            <a
+              className="des-panel__trailer-link"
+              href="https://nerd-labs.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Projects
             </a>
           </div>
 
@@ -237,7 +242,7 @@ export default function DESScroll() {
             </a>
 
             <div className="des-story__projects">
-              <p className="des-story__projects-label">Projects:</p>
+              <p className="des-story__projects-label">Services:</p>
               <a className="des-story__project-item" href="#ai-agents">
                 <span>AI Agents & Smart Automation</span>
                 <span className="des-story__arrow">{"↗\uFE0E"}</span>

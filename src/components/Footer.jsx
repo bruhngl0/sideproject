@@ -37,21 +37,26 @@ const Footer = () => {
         </h1>
 
         <div className="cta-buttons">
-          <a href="mailto:hello@odinscrow.com" className="cta-link">
+          <a href="mailto:adityashrm500@gmail.com" className="cta-link">
             <div className="left-content">
               <span className="icon">✉</span>
               <span>Email us</span>
             </div>
             <span className="arrow">→</span>
           </a>
-
-          <a href="tel:+123456789" className="cta-link">
+          <a
+            href="https://wa.me/919682672622"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-link"
+          >
             <div className="left-content">
               <span className="icon">📞</span>
-              <span>Call us</span>
+              <span>Whatsapp Us</span>
             </div>
+
             <span className="arrow">→</span>
-          </a>
+          </a>{" "}
         </div>
       </section>
 

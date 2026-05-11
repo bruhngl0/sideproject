@@ -16,7 +16,10 @@
 }
 
 .project-card .service-card {
-  transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    filter 0.5s ease;
 }
 
 .project-card.fade-out .service-card {
@@ -26,7 +29,7 @@
 }
 
 .service-card {
-  width:  100% ;
+  width: 100%;
   min-height: min(88vh, 820px);
   background: #f6f6f6;
   border: 1px solid rgba(23, 25, 26, 0.16);
@@ -66,20 +69,9 @@
   max-width: 18ch;
 }
 
+/* HIDE IMAGE ON DESKTOP */
 .service-card__media {
-  margin-top: 14px;
-  width: 100%;
-  aspect-ratio: 16 / 2;
-  border-radius: 10px;
-  border: 1px solid rgba(23, 25, 26, 0.12);
-  background:
-    linear-gradient(160deg, rgba(47, 88, 243, 0.16), rgba(111, 136, 255, 0.08)),
-    repeating-linear-gradient(
-      90deg,
-      rgba(23, 25, 26, 0.06) 0 1px,
-      transparent 1px 18px
-    ),
-    #f1f3f8;
+  display: none;
 }
 
 .service-card__intro {
@@ -139,7 +131,11 @@
 .des-wrapper--dark .service-card__media {
   border-color: rgba(236, 236, 239, 0.18);
   background:
-    linear-gradient(160deg, rgba(47, 88, 243, 0.22), rgba(111, 136, 255, 0.14)),
+    linear-gradient(
+      160deg,
+      rgba(47, 88, 243, 0.22),
+      rgba(111, 136, 255, 0.14)
+    ),
     repeating-linear-gradient(
       90deg,
       rgba(236, 236, 239, 0.07) 0 1px,
@@ -152,6 +148,7 @@
   border-top-color: rgba(236, 236, 239, 0.25);
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
   .project-card {
     padding: 10px;
@@ -165,7 +162,7 @@
 
   .service-card__title {
     font-size: clamp(30px, 20.4vw, 30px);
-font-weight: 400;
+    font-weight: 400;
   }
 
   .service-card__intro {
@@ -177,22 +174,17 @@ font-weight: 400;
     font-size: 14px;
   }
 
-
-  .service-card__media{
- aspect-ratio: 16 / 6.5;
-
+  /* SHOW IMAGE ONLY ON MOBILE */
+  .service-card__media {
+    display: block;
+    margin-top: 14px;
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    border-radius: 6px;
+    border: 1px solid rgba(23, 25, 26, 0.12);
+    overflow: hidden;
+    background: #2b2b2b;
   }
-}
-
-
-.service-card__media {
-  margin-top: 14px;
-  width: 100%;
-  aspect-ratio: 16 /9;
-  border-radius: 6px;
-  border: 1px solid rgba(23, 25, 26, 0.12);
-  overflow: hidden;
-  background: #2b2b2b;
 }
 
 .service-card__media img {
@@ -200,6 +192,6 @@ font-weight: 400;
   height: 100%;
   object-fit: cover;
   display: block;
-  scale: 1.2;
-  background: #2b2b2b ;
+  scale: 1.1;
+  background: #2b2b2b;
 }
