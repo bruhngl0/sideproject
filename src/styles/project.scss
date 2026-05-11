@@ -188,7 +188,7 @@ font-weight: 400;
 .service-card__media {
   margin-top: 14px;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 /9;
   border-radius: 10px;
   border: 1px solid rgba(23, 25, 26, 0.12);
   overflow: hidden;
@@ -200,4 +200,5 @@ font-weight: 400;
   height: 100%;
   object-fit: cover;
   display: block;
+  scale: 1.5;
 }
