@@ -57,13 +57,15 @@ function NerdLabsIcon({ className }) {
 
 const STRIPE_HEIGHTS = [2, 4, 6, 9, 13, 18, 24, 32];
 
-export default function DESScroll() {
+export default function DESScroll({ animReady }) {
   const outerRef = useRef(null);
   const headerRef = useRef(null);
   const panelRef = useRef(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
+    if (!animReady) return; // ← wait until loader is gone
+
     const id = setTimeout(() => {
       const ctx = gsap.context(() => {
         ScrollTrigger.create({
@@ -106,13 +108,16 @@ export default function DESScroll() {
           delay: 0.5,
           ease: "power2.out",
         });
+
+        ScrollTrigger.refresh();
       }, outerRef);
+    }, 100);
 
-      return () => ctx.revert();
-    }, 50);
-
-    return () => clearTimeout(id);
-  }, []);
+    return () => {
+      clearTimeout(id);
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [animReady]); // ← re-runs when animReady flips to true
 
   useEffect(() => {
     document.body.classList.toggle("theme-dark", isDarkMode);
@@ -160,16 +165,13 @@ export default function DESScroll() {
 
           <div className="des-panel__stripes">
             {STRIPE_HEIGHTS.map((h, i) => {
-              // Calculate a factor from 0 (first) to 1 (last)
               const factor = i / (STRIPE_HEIGHTS.length - 1);
-
               return (
                 <div
                   key={i}
                   className="des-panel__stripe"
                   style={{
                     height: `${h}px`,
-                    // This creates a custom property we can use in SCSS
                     "--darken-factor": factor,
                   }}
                 />
@@ -179,6 +181,7 @@ export default function DESScroll() {
               BUILDING WHAT THE FUTURE RUNS ON
             </div>
           </div>
+
           <div className="des-card">
             <div className="des-card__video-wrap">
               <div className="des-card__video-placeholder">
@@ -208,6 +211,7 @@ export default function DESScroll() {
               <span>INTRO</span>
             </footer>
           </div>
+
           <p className="des-panel__about-label">(About Series)</p>
 
           <section className="des-story">
