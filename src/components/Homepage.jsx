@@ -1,23 +1,13 @@
-import React from "react";
-import Header from "./Header";
-import Project from "./Project";
-import Parallax from "./Parralax";
-import Bruh from "./Bruh";
-
-import Footer from "./Footer";
-import TextReveal from "./TextReveal";
-import PhotographyPage from "./PhotographyPage";
-import "../../src/styles/header.scss";
-import "../../src/styles/footer.scss";
-import "../../src/styles/photography.scss";
-import "../../src/styles/parallax.scss";
-import "../../src/styles/sde.scss";
-
+import React, { useState } from "react";
 import Desscroll from "./Desscroll";
+import NerdLabsLoader from "./NerdLabsLoader";
 
 const Homepage = () => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div>
+      {!loaded && <NerdLabsLoader onComplete={() => setLoaded(true)} />}
       <Desscroll />
     </div>
   );

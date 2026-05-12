@@ -151,8 +151,6 @@ html, body, #root {
   display: block;
   color: var(--theme-fg);
   margin-top: 2px;
-  animation: spin-slow 10s linear infinite;
-  transform-origin: center center;
 }
 
 .des-header__tagline {
