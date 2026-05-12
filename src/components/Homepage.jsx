@@ -7,8 +7,11 @@ const Homepage = () => {
 
   return (
     <div>
-      {!loaded && <NerdLabsLoader onComplete={() => setLoaded(true)} />}
-      <Desscroll />
+      {!loaded ? (
+        <NerdLabsLoader onComplete={() => setLoaded(true)} />
+      ) : (
+        <Desscroll />
+      )}
     </div>
   );
 };
