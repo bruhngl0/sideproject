@@ -1,41 +1,68 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
     id: "01",
-    title: "AI AGENT SYSTEM",
-    type: "Production * Interactive * 3D",
+    title: "HAPPY SCHOOLS",
+    type: "NEXT.JS * TYPESCRIPT * REACT",
     year: "2026",
+    image: "https://ik.imagekit.io/north01x/Nerdlabs/happy-schools.png",
   },
   {
     id: "02",
-    title: "CLOUD KITCHEN SIMULATOR",
-    type: "Interactive * Web App",
+    title: "STUDIO MASON",
+    type: "NEXT.JS * TYPESCRIPT * TAILWIND",
     year: "2026",
+    image: "https://ik.imagekit.io/north01x/Nerdlabs/studio-mason.png",
   },
   {
     id: "03",
-    title: "NERDROOMS",
-    type: "Branding * Website * Product",
+    title: "UMI MATCHA",
+    type: "NEXT.JS * TYPESCRIPT * TAILWIND",
     year: "2026",
+    image: "https://ik.imagekit.io/north01x/Nerdlabs/umi-matcha.png",
   },
   {
     id: "04",
-    title: "RADIO ALICE",
-    type: "Experimental * Interface",
-    year: "2025",
+    title: "BAW STUDIOS",
+    type: "NEXT.JS * TYPESCRIPT * TAILWIND",
+    year: "2026",
+    image: "https://ik.imagekit.io/north01x/Nerdlabs/baw-studio.png",
   },
   {
     id: "05",
-    title: "ARIOSTEA",
-    type: "3D * Visual System",
+    title: "NINE ACADEMY",
+    type: "SVELTEKIT * TYPESCRIPT * TAILWIND",
     year: "2025",
+    image: "https://ik.imagekit.io/north01x/Nerdlabs/9academy.png",
   },
   {
     id: "06",
-    title: "ZEGNA OASI",
-    type: "Web * Campaign",
-    year: "2024",
+    title: "HAUTE COUTURE INDIA",
+    type: "NEXT.JS * TYPESCRIPT * TAILWIND",
+    year: "2026",
+    image: "https://ik.imagekit.io/north01x/Nerdlabs/haute-couture.png",
+  },
+  {
+    id: "07",
+    title: "MELLOW YELLOW STUDIO",
+    type: "TYPESCRIPT * TAILWIND * FIGMA",
+    year: "2026",
+    image: "https://ik.imagekit.io/north01x/Nerdlabs/mellow-yellow.png",
+  },
+  {
+    id: "08",
+    title: "SOCIAL DINING",
+    type: "NEXT.JS * TYPESCRIPT * TAILWIND",
+    year: "2026",
+    image: "https://ik.imagekit.io/north01x/Nerdlabs/social-dining.png",
+  },
+  {
+    id: "09",
+    title: "REVERIE",
+    type: "REACT * REMOTION * SVELTE",
+    year: "2026",
+    image: "https://ik.imagekit.io/north01x/Nerdlabs/reverie.png",
   },
 ];
 
@@ -590,9 +617,21 @@ const Work = () => {
               <div
                 className={`work-item__image ${showImages ? "" : "is-hidden"}`}
               >
-                <div className="work-item__placeholder-text">
-                  Image Placeholder
-                </div>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                ) : (
+                  <div className="work-item__placeholder-text">
+                    Image Placeholder
+                  </div>
+                )}
               </div>
             </article>
           ))}
