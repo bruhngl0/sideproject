@@ -4,6 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Project from "./Project";
 import Footer from "./Footer";
 import "../styles/desscroll.scss";
+import Work from "../components/Work.jsx";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,28 +84,27 @@ export default function DESScroll({ animReady }) {
           invalidateOnRefresh: true,
         });
 
-        gsap.from(".des-panel__stripe", {
+        gsap.to(".des-panel__stripe", {
           scrollTrigger: {
             trigger: ".des-panel__stripes",
             scroller: outerRef.current,
             start: "top 90%",
           },
-          scaleX: 0,
-          transformOrigin: "left center",
-          opacity: 0,
+          scaleX: 1,
+          opacity: 1,
           duration: 0.6,
           stagger: 0.06,
           ease: "power2.out",
         });
 
-        gsap.from(".des-panel__stripe-cta", {
+        gsap.to(".des-panel__stripe-cta", {
           scrollTrigger: {
             trigger: ".des-panel__stripes",
             scroller: outerRef.current,
             start: "top 85%",
           },
-          y: 20,
-          opacity: 0,
+          y: 0,
+          opacity: 1,
           duration: 0.7,
           delay: 0.5,
           ease: "power2.out",
@@ -153,14 +154,9 @@ export default function DESScroll({ animReady }) {
               <br />
               to Work.
             </p>
-            <a
-              className="des-panel__trailer-link"
-              href="https://nerd-labs.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link className="des-panel__trailer-link" to="/projects">
               Projects
-            </a>
+            </Link>{" "}
           </div>
 
           <div className="des-panel__stripes">
@@ -173,11 +169,17 @@ export default function DESScroll({ animReady }) {
                   style={{
                     height: `${h}px`,
                     "--darken-factor": factor,
+                    opacity: 0,
+                    transform: "scaleX(0)",
+                    transformOrigin: "left center",
                   }}
                 />
               );
             })}
-            <div className="des-panel__stripe-cta">
+            <div
+              className="des-panel__stripe-cta"
+              style={{ opacity: 0, transform: "translateY(20px)" }}
+            >
               BUILDING WHAT THE FUTURE RUNS ON
             </div>
           </div>

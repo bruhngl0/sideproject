@@ -1,15 +1,14 @@
 import React from "react";
 import Homepage from "./components/Homepage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Test from "./components/Test";
-import Sabera from "./components/Sabera";
+import Work from "./components/Work.jsx";
 function App() {
   return (
     <>
       <Router>
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/sabera" element={<Sabera />} />
+          <Route path="/projects" element={<Work />} />
         </Routes>
       </Router>
     </>
