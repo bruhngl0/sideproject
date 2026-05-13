@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "../styles/project.scss";
 
 const serviceStacks = [
@@ -96,7 +96,7 @@ const Project = () => {
           }
         });
       },
-      { threshold: 0.25 },
+      { threshold: 0.25 }
     );
 
     cardRefs.current.forEach((card) => {
